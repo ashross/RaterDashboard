@@ -1,0 +1,5 @@
+/nbproject/*
+/resources/sass/.sass-cache/
+/build/*
+/.sencha_backup/
+/.idea/*
