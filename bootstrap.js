@@ -665,6 +665,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.home.Home": [],
   "RaterDashboard.view.home.HomeCardGroup": [],
   "RaterDashboard.view.home.MainTabPanel": [],
+  "RaterDashboard.view.home.PreAP": [],
+  "RaterDashboard.view.home.TeacherCommunity": [],
   "RaterDashboard.view.maps.Maps": [],
   "RaterDashboard.view.more.AboutRater": [],
   "RaterDashboard.view.more.MoreCardGroup": [],
@@ -1439,6 +1441,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "RaterDashboard.view.home.MainTabPanel": [
     "widget.mainTabPanel"
+  ],
+  "RaterDashboard.view.home.PreAP": [
+    "widget.preAP"
+  ],
+  "RaterDashboard.view.home.TeacherCommunity": [
+    "widget.teacherCommunity"
   ],
   "RaterDashboard.view.maps.Maps": [
     "widget.maps"
