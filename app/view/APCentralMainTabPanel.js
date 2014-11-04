@@ -1,9 +1,8 @@
-Ext.define("RaterDashboard.view.home.MainTabPanel", {
+Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
   extend: 'Ext.TabPanel',
-  xtype: 'mainTabPanel',
+  xtype: 'apCentralMainTabPanel',
   requires:[
-    'RaterDashboard.view.video.VideoCardGroup',
-    'RaterDashboard.view.home.HomeCardGroup'
+    'RaterDashboard.view.APCentral'
   ],
   config: {
     tabBarPosition: 'bottom',
@@ -12,7 +11,7 @@ Ext.define("RaterDashboard.view.home.MainTabPanel", {
     },
     items: [
       {
-	xtype:'homeCardGroup',
+	xtype:'apCentral',
 	title: 'Home',
 	iconCls: 'home'
       },

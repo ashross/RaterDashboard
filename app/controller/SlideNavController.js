@@ -11,7 +11,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       // Home card group
       homeCardGroup: 'homeCardGroup',
       // Main Tab Panel
-      mainTabPanel:'mainTabPanel'
+      homeMainTabPanel:'homeMainTabPanel'
       
     },
     control: {
@@ -124,8 +124,8 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 //      me.getHomeCardGroup().setActiveItem();
     } else if (record.data.name === 'Rater Home') {
       me.getMainToolbar().setTitle('Home');
-      me.getMainTabPanel().setActiveItem(0);
-      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+      me.getHomeMainTabPanel().setActiveItem(0);
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });
@@ -133,29 +133,51 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
     } else if (record.data.name === 'AP Courses and Exams') {
       me.getMainToolbar().setTitle('Courses & Exams');
 //      coursesAndExams
-      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });
-      console.log(me.getMainTabPanel().getActiveItem().getActiveItem());
-      me.getMainTabPanel().setActiveItem(0);
+      me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(1);
     }else if (record.data.name === 'PRE-AP &reg;') {
       me.getMainToolbar().setTitle('Pre-AP &reg;');
-      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });
-      me.getMainTabPanel().setActiveItem(0);
+      me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(2);
     }else if (record.data.name === 'AP Teacher Community') {
       me.getMainToolbar().setTitle('Teacher Community');
-      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });
-      me.getMainTabPanel().setActiveItem(0);
+      me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(3);
+    }else if (record.data.name === 'Prefessional Development') {
+      me.getMainToolbar().setTitle('Prefessional Development');
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
+	type: 'slide',
+	direction: 'left'
+      });
+      me.getHomeMainTabPanel().setActiveItem(0);
+      me.getHomeCardGroup().setActiveItem(4);
+    }else if (record.data.name === 'Become and AP Reader') {
+      me.getMainToolbar().setTitle('AP Reader');
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
+	type: 'slide',
+	direction: 'left'
+      });
+      me.getHomeMainTabPanel().setActiveItem(0);
+      me.getHomeCardGroup().setActiveItem(5);
+    }else if (record.data.name === 'Schedule') {
+      me.getMainToolbar().setTitle(record.data.name);
+      me.getMainCardGroup().animateActiveItem('schedule', {
+	type: 'slide',
+	direction: 'left'
+      });
     }
+    
   }
 });

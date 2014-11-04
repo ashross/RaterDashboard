@@ -25,7 +25,7 @@ Ext.application({
     'SlideNavController',
     'HomeController',
     'MoreController',
-    'NewsController',
+    'MainController',
     'RaterController'
   ],
   stores: [

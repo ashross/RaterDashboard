@@ -1,0 +1,24 @@
+@mixin buttons{
+  .transparentBtnCls{
+    background:none !important;
+    border:none !important;
+
+    .x-button-label{
+      font-weight: normal;
+    }
+  }
+  .backButtonCls{
+    background:none !important;
+    border:none !important;
+    color:#a7b526 !important;
+    font-size: 17px !important;
+  }
+  .blueLinkBtnCls{
+    text-decoration: underline;
+    color: #069;
+    font-size: 12px;
+    .x-button-label{
+      text-align: left;
+    }
+  }
+}

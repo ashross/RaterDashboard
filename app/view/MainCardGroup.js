@@ -2,13 +2,14 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
   extend: 'Ext.Container',
   xtype: 'mainCardGroup',
   requires: [
-    'RaterDashboard.view.News',
+    'RaterDashboard.view.APCentralMainTabPanel',
     'RaterDashboard.view.users.Login',
     'RaterDashboard.view.maps.Maps',
     'RaterDashboard.view.more.MoreCardGroup',
     'RaterDashboard.view.sponsor.Sponsor',
+    'RaterDashboard.view.schedule.Schedule',
     'RaterDashboard.view.rater.Rater',
-    'RaterDashboard.view.home.MainTabPanel',
+    'RaterDashboard.view.home.HomeMainTabPanel',
     'RaterDashboard.view.facebook.FacebookCardGroup',
     'RaterDashboard.view.video.VideoCardGroup'
   ],
@@ -17,7 +18,7 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
     items: [
       {
 	xtype: 'titlebar',
-	title: 'News',
+	title: 'AP Central',
 	ui:'mainToolbar',
 	itemId: 'mainToolbarId',
 	docked: 'top',
@@ -38,7 +39,7 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 	]
       },
       {
-	xtype: 'news'
+	xtype: 'apCentralMainTabPanel'
       },
       {
 	xtype: 'login'
@@ -50,6 +51,9 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 	xtype: 'sponsor'
       },
       {
+	xtype: 'schedule'
+      },
+      {
 	xtype: 'rater'
       },
       {
@@ -59,7 +63,7 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 	xtype: 'moreCardGroup'
       },
       {
-	xtype: 'mainTabPanel'
+	xtype: 'homeMainTabPanel'
       },
       {
 	xtype: 'facebookCardGroup'

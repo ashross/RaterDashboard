@@ -43,7 +43,7 @@ Ext.define("RaterDashboard.controller.LoginController", {
       me.getSlideNavList().refresh();
 
       me.getMainToolbar().setTitle('Home');
-      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });

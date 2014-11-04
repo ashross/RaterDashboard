@@ -3,6 +3,7 @@ Ext.define("RaterDashboard.view.more.AboutRater", {
   xtype: 'aboutRater',
   config: {
     scrollable:'vertical',
+    styleHtmlContent: true,
     items: [
       {
 	xtype: 'panel',

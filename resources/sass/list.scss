@@ -1,0 +1,50 @@
+@mixin list{
+  .instrumentsListCls.x-list{
+    .x-list-item{
+      padding: 5px;
+      .x-dock-horizontal{
+	border-top:2px solid #ffffff !important;
+	background: #3c668a;
+	.x-list-item-body{
+	  padding:6px 0px;
+	  min-height:50px !important;
+	}
+      }
+    }
+  }
+  .APCentralListCls{
+    border-bottom: 1px solid #ccc;
+    .x-dataview-item{
+      padding: 10px;
+      width:33%;
+      display: inline-block !important;
+      .headingCls{
+	text-decoration: underline;
+	color:blue;
+	font-size: 14px;
+	padding-bottom: 5px;
+      }
+      .contentCls{
+	font-size: 13px;
+      }
+    }  
+  }
+  /*  .listCls, .x-list{
+      background: #f7f7f7 !important;
+  
+      .x-list-item{
+	font-size: 12px;
+      }
+  
+      .x-list-header{
+	.x-innerhtml{
+	  padding:0 !important;
+	}
+      }
+  
+      .x-list-item.x-item-pressed, .x-list-item.x-item-selected{
+	background:#E5EE96 !important;
+	border-top-color: #C5CD7E !important;
+      }
+    }*/
+}
