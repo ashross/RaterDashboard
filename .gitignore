@@ -3,3 +3,5 @@
 /build/*
 /.sencha_backup/
 /.idea/*
+/phonegap/platforms/*
+/phonegap/www/*
