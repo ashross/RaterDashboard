@@ -40,6 +40,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
   slideNavListTapped: function(list, index, target, record, e, eOpts) {
     var me = this;
     me.toggleNav();
+    console.log(record.data.name);
     if (record.data.name === 'Login to RaterApp') {
       me.getMainToolbar().setTitle('Login');
       me.getMainCardGroup().animateActiveItem('login', {
@@ -138,11 +139,23 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       });
       console.log(me.getMainTabPanel().getActiveItem().getActiveItem());
       me.getMainTabPanel().setActiveItem(0);
-//      me.getMainCardGroup().animateActiveItem('homeCardGroup', {
-//	type: 'slide',
-//	direction: 'left'
-//      });
       me.getHomeCardGroup().setActiveItem(1);
+    }else if (record.data.name === 'PRE-AP &reg;') {
+      me.getMainToolbar().setTitle('Pre-AP &reg;');
+      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+	type: 'slide',
+	direction: 'left'
+      });
+      me.getMainTabPanel().setActiveItem(0);
+      me.getHomeCardGroup().setActiveItem(2);
+    }else if (record.data.name === 'AP Teacher Community') {
+      me.getMainToolbar().setTitle('Teacher Community');
+      me.getMainCardGroup().animateActiveItem('mainTabPanel', {
+	type: 'slide',
+	direction: 'left'
+      });
+      me.getMainTabPanel().setActiveItem(0);
+      me.getHomeCardGroup().setActiveItem(3);
     }
   }
 });

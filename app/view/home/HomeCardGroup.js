@@ -3,7 +3,9 @@ Ext.define("RaterDashboard.view.home.HomeCardGroup", {
   xtype: 'homeCardGroup',
   requires:[
     'RaterDashboard.view.home.Home',
-    'RaterDashboard.view.home.CoursesAndExams'
+    'RaterDashboard.view.home.CoursesAndExams',
+    'RaterDashboard.view.home.PreAP',
+    'RaterDashboard.view.home.TeacherCommunity'
   ],
   config: {
     layout:'card',
@@ -14,6 +16,12 @@ Ext.define("RaterDashboard.view.home.HomeCardGroup", {
       {
 	xtype: 'coursesAndExams'
       },
+      {
+	xtype: 'preAP'
+      },
+      {
+	xtype:'teacherCommunity'
+      }
     ]
   }
 });
