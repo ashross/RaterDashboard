@@ -16,7 +16,8 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSet": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
-  "RaterDashboardP": "app"
+  "RaterDashboard": "app",
+  "RaterDashboard.view.more.AboutRater": "app/view/more/aboutRater.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
   "Ext.AbstractComponent": [],
@@ -638,7 +639,43 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "RaterDashboardP.view.Main": []
+  "RaterDashboard.Utilities": [],
+  "RaterDashboard.controller.HomeController": [],
+  "RaterDashboard.controller.LoginController": [],
+  "RaterDashboard.controller.MoreController": [],
+  "RaterDashboard.controller.NewsController": [],
+  "RaterDashboard.controller.RaterController": [],
+  "RaterDashboard.controller.SlideNavController": [],
+  "RaterDashboard.model.BeforeLoginSlideList": [],
+  "RaterDashboard.model.News": [],
+  "RaterDashboard.model.Rater": [],
+  "RaterDashboard.model.Video": [],
+  "RaterDashboard.store.AfterLoginSlideListStore": [],
+  "RaterDashboard.store.BeforeLoginSlideListStore": [],
+  "RaterDashboard.store.NewsStore": [],
+  "RaterDashboard.store.Raters": [],
+  "RaterDashboard.store.Videos": [],
+  "RaterDashboard.view.Main": [],
+  "RaterDashboard.view.MainCardGroup": [],
+  "RaterDashboard.view.NavigationList": [],
+  "RaterDashboard.view.News": [],
+  "RaterDashboard.view.facebook.FacebookCardGroup": [],
+  "RaterDashboard.view.facebook.FacebookLogin": [],
+  "RaterDashboard.view.home.CoursesAndExams": [],
+  "RaterDashboard.view.home.Home": [],
+  "RaterDashboard.view.home.HomeCardGroup": [],
+  "RaterDashboard.view.home.MainTabPanel": [],
+  "RaterDashboard.view.maps.Maps": [],
+  "RaterDashboard.view.more.AboutRater": [],
+  "RaterDashboard.view.more.MoreCardGroup": [],
+  "RaterDashboard.view.more.MoreInfoList": [],
+  "RaterDashboard.view.more.PrivacyPolicy": [],
+  "RaterDashboard.view.rater.Rater": [],
+  "RaterDashboard.view.sponsor.Sponsor": [],
+  "RaterDashboard.view.users.Login": [],
+  "RaterDashboard.view.video.VideoCardGroup": [],
+  "RaterDashboard.view.video.VideoLinks": [],
+  "RaterDashboard.view.video.VideoList": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1357,7 +1394,83 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
-  "RaterDashboardP.view.Main": [
+  "RaterDashboard.Utilities": [],
+  "RaterDashboard.controller.HomeController": [],
+  "RaterDashboard.controller.LoginController": [],
+  "RaterDashboard.controller.MoreController": [],
+  "RaterDashboard.controller.NewsController": [],
+  "RaterDashboard.controller.RaterController": [],
+  "RaterDashboard.controller.SlideNavController": [],
+  "RaterDashboard.model.BeforeLoginSlideList": [],
+  "RaterDashboard.model.News": [],
+  "RaterDashboard.model.Rater": [],
+  "RaterDashboard.model.Video": [],
+  "RaterDashboard.store.AfterLoginSlideListStore": [],
+  "RaterDashboard.store.BeforeLoginSlideListStore": [],
+  "RaterDashboard.store.NewsStore": [],
+  "RaterDashboard.store.Raters": [],
+  "RaterDashboard.store.Videos": [],
+  "RaterDashboard.view.Main": [
     "widget.main"
+  ],
+  "RaterDashboard.view.MainCardGroup": [
+    "widget.mainCardGroup"
+  ],
+  "RaterDashboard.view.NavigationList": [
+    "widget.navigationList"
+  ],
+  "RaterDashboard.view.News": [
+    "widget.news"
+  ],
+  "RaterDashboard.view.facebook.FacebookCardGroup": [
+    "widget.facebookCardGroup"
+  ],
+  "RaterDashboard.view.facebook.FacebookLogin": [
+    "widget.facebookLogin"
+  ],
+  "RaterDashboard.view.home.CoursesAndExams": [
+    "widget.coursesAndExams"
+  ],
+  "RaterDashboard.view.home.Home": [
+    "widget.home"
+  ],
+  "RaterDashboard.view.home.HomeCardGroup": [
+    "widget.homeCardGroup"
+  ],
+  "RaterDashboard.view.home.MainTabPanel": [
+    "widget.mainTabPanel"
+  ],
+  "RaterDashboard.view.maps.Maps": [
+    "widget.maps"
+  ],
+  "RaterDashboard.view.more.AboutRater": [
+    "widget.aboutRater"
+  ],
+  "RaterDashboard.view.more.MoreCardGroup": [
+    "widget.moreCardGroup"
+  ],
+  "RaterDashboard.view.more.MoreInfoList": [
+    "widget.moreInfoList"
+  ],
+  "RaterDashboard.view.more.PrivacyPolicy": [
+    "widget.privacyPolicy"
+  ],
+  "RaterDashboard.view.rater.Rater": [
+    "widget.rater"
+  ],
+  "RaterDashboard.view.sponsor.Sponsor": [
+    "widget.sponsor"
+  ],
+  "RaterDashboard.view.users.Login": [
+    "widget.login"
+  ],
+  "RaterDashboard.view.video.VideoCardGroup": [
+    "widget.videoCardGroup"
+  ],
+  "RaterDashboard.view.video.VideoLinks": [
+    "widget.videoLinks"
+  ],
+  "RaterDashboard.view.video.VideoList": [
+    "widget.videoList"
   ]
 });

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="calendar.AndroidCalendar"
+    version="1">
+
+   <name>AndroidCalendar</name>
+
+   <description>
+     This plugin allows allows you to manipulate the native calendar.
+   </description>
+
+   <engines>
+      <engine name="cordova" version=">=3.0.0" />
+   </engines>
+
+   <js-module src="www/AndroidCalendar.js" name="AndroidCalendar">
+      <clobbers target="AndroidCalendar" />
+   </js-module>
+   <!-- Add <feature name="CalendarPlugin">
+       <param name="android-package" value="calendar.AndroidCalendar" />
+</feature> in config.xml
+   -->
+   <!-- android -->
+   <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+         <feature name="AndroidCalendar">
+            <param name="android-package" value="calendar.AndroidCalendar" />
+         </feature>
+      </config-file>
+     <config-file target="AndroidManifest.xml" parent="/manifest">
+       <uses-permission android:name="android.permission.READ_CALENDAR"/>
+       <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+     </config-file>
+      <source-file src="src/android/calendar/AndroidCalendar.java" target-dir="src/calendar" />
+   </platform>
+
+<!-- ios -->
+<platform name="ios">
+    <config-file target="config.xml" parent="/*">
+        <feature name="AndroidCalendar">
+            <param name="ios-package" value="AndroidCalendar" />
+        </feature>
+    </config-file>
+    <header-file src="src/ios/AndroidCalendar.h" />
+    <source-file src="src/ios/AndroidCalendar.m" />
+    <framework src="EventKit.framework" />
+    <framework src="EventKitUI.framework" />
+</platform>
+</plugin>

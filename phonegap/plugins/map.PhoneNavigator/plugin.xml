@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="map.PhoneNavigator" version="0.0.1">
+    <name> PhoneNavigator</name>
+    <description>Phonegap/Cordova plugin that allows you to clear cookies of the webview. Use it for logging out the user, restart analytics session etc.</description>
+   
+    <keywords>cordova,phonegap,phonenavigator</keywords>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/PhoneNavigator.js" name="PhoneNavigator">
+        <clobbers target="PhoneNavigator" />
+    </js-module>
+
+    
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PhoneNavigator" >
+                <param name="android-package" value="map.PhoneNavigator"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/map/PhoneNavigator.java" target-dir="src/map" />
+    </platform>
+</plugin>
