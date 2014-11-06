@@ -26,7 +26,8 @@ Ext.application({
     'HomeController',
     'MoreController',
     'MainController',
-    'RaterController'
+    'RaterController',
+    'SchedulerController'
   ],
   stores: [
     'BeforeLoginSlideListStore',

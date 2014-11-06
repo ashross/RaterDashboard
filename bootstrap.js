@@ -642,9 +642,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.Utilities": [],
   "RaterDashboard.controller.HomeController": [],
   "RaterDashboard.controller.LoginController": [],
+  "RaterDashboard.controller.MainController": [],
   "RaterDashboard.controller.MoreController": [],
-  "RaterDashboard.controller.NewsController": [],
   "RaterDashboard.controller.RaterController": [],
+  "RaterDashboard.controller.SchedulerController": [],
   "RaterDashboard.controller.SlideNavController": [],
   "RaterDashboard.model.BeforeLoginSlideList": [],
   "RaterDashboard.model.News": [],
@@ -655,17 +656,20 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.store.NewsStore": [],
   "RaterDashboard.store.Raters": [],
   "RaterDashboard.store.Videos": [],
+  "RaterDashboard.view.APCentral": [],
+  "RaterDashboard.view.APCentralMainTabPanel": [],
   "RaterDashboard.view.Main": [],
   "RaterDashboard.view.MainCardGroup": [],
   "RaterDashboard.view.NavigationList": [],
-  "RaterDashboard.view.News": [],
   "RaterDashboard.view.facebook.FacebookCardGroup": [],
   "RaterDashboard.view.facebook.FacebookLogin": [],
+  "RaterDashboard.view.home.APReader": [],
   "RaterDashboard.view.home.CoursesAndExams": [],
   "RaterDashboard.view.home.Home": [],
   "RaterDashboard.view.home.HomeCardGroup": [],
-  "RaterDashboard.view.home.MainTabPanel": [],
+  "RaterDashboard.view.home.HomeMainTabPanel": [],
   "RaterDashboard.view.home.PreAP": [],
+  "RaterDashboard.view.home.PrefessionalDevelopment": [],
   "RaterDashboard.view.home.TeacherCommunity": [],
   "RaterDashboard.view.maps.Maps": [],
   "RaterDashboard.view.more.AboutRater": [],
@@ -673,6 +677,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.more.MoreInfoList": [],
   "RaterDashboard.view.more.PrivacyPolicy": [],
   "RaterDashboard.view.rater.Rater": [],
+  "RaterDashboard.view.schedule.Schedule": [],
   "RaterDashboard.view.sponsor.Sponsor": [],
   "RaterDashboard.view.users.Login": [],
   "RaterDashboard.view.video.VideoCardGroup": [],
@@ -1399,9 +1404,10 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.Utilities": [],
   "RaterDashboard.controller.HomeController": [],
   "RaterDashboard.controller.LoginController": [],
+  "RaterDashboard.controller.MainController": [],
   "RaterDashboard.controller.MoreController": [],
-  "RaterDashboard.controller.NewsController": [],
   "RaterDashboard.controller.RaterController": [],
+  "RaterDashboard.controller.SchedulerController": [],
   "RaterDashboard.controller.SlideNavController": [],
   "RaterDashboard.model.BeforeLoginSlideList": [],
   "RaterDashboard.model.News": [],
@@ -1412,6 +1418,12 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.store.NewsStore": [],
   "RaterDashboard.store.Raters": [],
   "RaterDashboard.store.Videos": [],
+  "RaterDashboard.view.APCentral": [
+    "widget.apCentral"
+  ],
+  "RaterDashboard.view.APCentralMainTabPanel": [
+    "widget.apCentralMainTabPanel"
+  ],
   "RaterDashboard.view.Main": [
     "widget.main"
   ],
@@ -1421,14 +1433,14 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.view.NavigationList": [
     "widget.navigationList"
   ],
-  "RaterDashboard.view.News": [
-    "widget.news"
-  ],
   "RaterDashboard.view.facebook.FacebookCardGroup": [
     "widget.facebookCardGroup"
   ],
   "RaterDashboard.view.facebook.FacebookLogin": [
     "widget.facebookLogin"
+  ],
+  "RaterDashboard.view.home.APReader": [
+    "widget.apReader"
   ],
   "RaterDashboard.view.home.CoursesAndExams": [
     "widget.coursesAndExams"
@@ -1439,11 +1451,14 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.view.home.HomeCardGroup": [
     "widget.homeCardGroup"
   ],
-  "RaterDashboard.view.home.MainTabPanel": [
-    "widget.mainTabPanel"
+  "RaterDashboard.view.home.HomeMainTabPanel": [
+    "widget.homeMainTabPanel"
   ],
   "RaterDashboard.view.home.PreAP": [
     "widget.preAP"
+  ],
+  "RaterDashboard.view.home.PrefessionalDevelopment": [
+    "widget.prefessionalDevelopment"
   ],
   "RaterDashboard.view.home.TeacherCommunity": [
     "widget.teacherCommunity"
@@ -1465,6 +1480,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "RaterDashboard.view.rater.Rater": [
     "widget.rater"
+  ],
+  "RaterDashboard.view.schedule.Schedule": [
+    "widget.schedule"
   ],
   "RaterDashboard.view.sponsor.Sponsor": [
     "widget.sponsor"

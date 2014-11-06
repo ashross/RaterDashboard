@@ -40,10 +40,10 @@
 			"path": "phonegap.js",
 			"remote": true
 		},
+		
 	{
-	"path": "cordova.js",
-		"remote": true
-	},
+          "path" : "phonegap/plugins/com.bez4pieci.cookies/www/cookies.js"
+        },
 	{
 	"path": "touch/sencha-touch.js",
 		"x-bootstrap": true
@@ -106,10 +106,11 @@
 	*/
 	"resources": [
 		"config.xml",
-		"config.xml",
 		"resources/images",
 		"resources/icons",
-		"resources/startup"
+		"resources/startup",
+		"resources/data"
+		
 	],
 	/**
 	* File / directory name matchers to ignore when copying to the builds, must be valid regular expressions

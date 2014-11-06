@@ -33,6 +33,7 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
 	  {
 	    xtype: 'button',
 	    cls: 'scheduleBtnCls',
+        itemId:'checkInBtnId',
 	    text: 'Check in'
 	  }
 	]
@@ -58,7 +59,7 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
 	xtype: 'panel',
 	padding: 10,
 	html: [
-	  '<h2 class="section">Speakers</h2>'
+	  '<h2 class="section">Raters</h2>'
 	]
       },
       {

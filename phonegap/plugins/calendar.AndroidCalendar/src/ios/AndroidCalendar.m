@@ -81,7 +81,7 @@
     
     self.mCallBackId    =   command.callbackId;
     
-    CDVPluginResult *pluginResult  = nil;
+    //CDVPluginResult *pluginResult  = nil;
     NSDictionary* values = [command.arguments objectAtIndex:0];
     
     NSString* title      = [values objectForKey:@"title"];

@@ -21,6 +21,7 @@ Ext.define("RaterDashboard.controller.RaterController", {
     var me = this;
     console.log(record.data.url);
     var url = record.data.url;
+    alert('video url is '+ url);
     me.getNavBtn().setHidden(true);
     me.getBackButton().setHidden(false);
     me.getMainToolbar().setTitle('Player');
