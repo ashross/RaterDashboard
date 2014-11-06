@@ -17,11 +17,9 @@ Ext.define("RaterDashboard.controller.LoginController", {
       }
     }
   },
-  loginBtnTapped: function() {
+  loginBtnTapped: function () {
     var me = this;
     var loginFormRef = me.getLoginForm().getValues();
-//    console.log(loginFormRef);
-
     if (loginFormRef.email === '') {
       Ext.Msg.alert('Error', "Please enter email address.");
     } else if (!validateEmail(loginFormRef.email)) {
@@ -34,21 +32,34 @@ Ext.define("RaterDashboard.controller.LoginController", {
       Ext.Msg.alert('Error', "Password is wrong");
     } else {
       console.log('loggedin');
-      console.log(me.getSlideNavList().getGrouped());
-      me.getSlideNavList().setGrouped(null);
-      console.log(me.getSlideNavList().getGrouped());
-      me.getSlideNavList().setStore('afterLoginSlideListStore');
-      me.getSlideNavList().setGrouped(true);
-      console.log(me.getSlideNavList().getGrouped());
-      me.getSlideNavList().refresh();
-
-      me.getMainToolbar().setTitle('Home');
-      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
-	type: 'slide',
-	direction: 'left'
+      GLOB.f.loadMask();
+      Ext.Ajax.request({
+	url: 'resources/data/afterLoginSlideList.json',
+	method: 'GET',
+	success: function (response) {
+	  Ext.Viewport.unmask();
+	  var responseJason = JSON.parse(response.responseText);
+	  console.log('-------Response---------');
+	  console.log(responseJason);
+	  console.log('----------------');
+	  var slideNavListStore = Ext.getStore('slideNavListStore');
+	  slideNavListStore.removeAll();
+	  slideNavListStore.setData(responseJason);
+	  console.log('-------Store---------');
+	  console.log(slideNavListStore);
+	  console.log('----------------');
+	  me.getMainToolbar().setTitle('Home');
+	  me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
+	    type: 'slide',
+	    direction: 'left'
+	  });
+	},
+	failure: function (response) {
+	  console.log(response);
+	  Ext.Viewport.unmask();
+	  Ext.Msg.alert('Failure', "Please check your internet connection.");
+	}
       });
-
-
     }
   }
 });

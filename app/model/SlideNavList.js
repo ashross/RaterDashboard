@@ -1,4 +1,4 @@
-Ext.define('RaterDashboard.model.BeforeLoginSlideList', {
+Ext.define('RaterDashboard.model.SlideNavList', {
   extend: 'Ext.data.Model',
   config: {
     identifier: 'uuid',

@@ -11,8 +11,8 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       // Home card group
       homeCardGroup: 'homeCardGroup',
       // Main Tab Panel
-      homeMainTabPanel:'homeMainTabPanel'
-      
+      homeMainTabPanel: 'homeMainTabPanel'
+
     },
     control: {
       navBtn: {
@@ -26,7 +26,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
   /**
    * Toggle the slide navogation view
    */
-  toggleNav: function() {
+  toggleNav: function () {
     var me = this;
     var mainEl = me.getMainCardGroup().element;
     if (mainEl.hasCls('out')) {
@@ -37,7 +37,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       me.getMainCardGroup().setMasked(true);
     }
   },
-  slideNavListTapped: function(list, index, target, record, e, eOpts) {
+  slideNavListTapped: function (list, index, target, record, e, eOpts) {
     var me = this;
     me.toggleNav();
     console.log(record.data.name);
@@ -64,7 +64,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       Ext.Ajax.request({
 	url: 'resources/data/raterData.json',
 	method: 'GET',
-	success: function(response) {
+	success: function (response) {
 	  Ext.Viewport.unmask();
 	  var responseJason = JSON.parse(response.responseText);
 	  console.log(responseJason);
@@ -76,7 +76,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 	    direction: 'left'
 	  });
 	},
-	failure: function(response) {
+	failure: function (response) {
 	  console.log(response);
 	  Ext.Viewport.unmask();
 	  Ext.Msg.alert('Failure', "Please check your internet connection.");
@@ -90,21 +90,28 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 	direction: 'left'
       });
     } else if (record.data.name === 'Logout to RaterApp') {
-      Ext.Msg.confirm('Alert', 'Are you sure you want to Logout?', function(id, value) {
+      Ext.Msg.confirm('Alert', 'Are you sure you want to Logout?', function (id, value) {
 	if (id === 'yes') {
-	  console.log('logged out');
-	  console.log('first time ' + me.getSlideNavList().getGrouped());
-	  me.getSlideNavList().setGrouped(false);
-	  console.log('second time ' + me.getSlideNavList().getGrouped());
-
-	  me.getSlideNavList().setStore('beforeLoginSlideListStore');
-	  me.getSlideNavList().setGrouped(true);
-	  console.log('third time ' + me.getSlideNavList().getGrouped());
-	  me.getSlideNavList().refresh();
-	  me.getMainToolbar().setTitle('News');
-	  me.getMainCardGroup().animateActiveItem('news', {
-	    type: 'slide',
-	    direction: 'right'
+	  GLOB.f.loadMask();
+	  Ext.Ajax.request({
+	    url: 'resources/data/beforeLoginSlideList.json',
+	    method: 'GET',
+	    success: function (response) {
+	      Ext.Viewport.unmask();
+	      var responseJason = JSON.parse(response.responseText);
+	      console.log(responseJason);
+	      var slideNavListStore = Ext.getStore('slideNavListStore');
+	      slideNavListStore.removeAll();
+	      slideNavListStore.setData(responseJason);
+	      me.getMainToolbar().setTitle('AP Central');
+	      me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
+		type: 'slide',
+		direction: 'right'
+	      });
+	    },
+	    failure: function (response) {
+	      Ext.Viewport.unmask();
+	    }
 	  });
 	}
       }, this);
@@ -139,7 +146,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       });
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(1);
-    }else if (record.data.name === 'PRE-AP &reg;') {
+    } else if (record.data.name === 'PRE-AP &reg;') {
       me.getMainToolbar().setTitle('Pre-AP &reg;');
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
@@ -147,7 +154,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       });
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(2);
-    }else if (record.data.name === 'AP Teacher Community') {
+    } else if (record.data.name === 'AP Teacher Community') {
       me.getMainToolbar().setTitle('Teacher Community');
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
@@ -155,7 +162,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       });
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(3);
-    }else if (record.data.name === 'Prefessional Development') {
+    } else if (record.data.name === 'Prefessional Development') {
       me.getMainToolbar().setTitle('Prefessional Development');
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
@@ -163,7 +170,7 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       });
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(4);
-    }else if (record.data.name === 'Become and AP Reader') {
+    } else if (record.data.name === 'Become and AP Reader') {
       me.getMainToolbar().setTitle('AP Reader');
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
@@ -171,13 +178,13 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       });
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(5);
-    }else if (record.data.name === 'Schedule') {
+    } else if (record.data.name === 'Schedule') {
       me.getMainToolbar().setTitle(record.data.name);
       me.getMainCardGroup().animateActiveItem('schedule', {
 	type: 'slide',
 	direction: 'left'
       });
     }
-    
+
   }
 });

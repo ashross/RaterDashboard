@@ -41,7 +41,7 @@ Ext.define('RaterDashboard.view.maps.Maps', {
 	gMap.setCenter(userLocation);
       },
       failure: function() {
-	Ext.Msg.alert('Error', 'Can\'t Find You!');
+	Ext.Msg.alert('Failure', 'Please check your internet');
       }
     });
   }

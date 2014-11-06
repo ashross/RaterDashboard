@@ -1,0 +1,19 @@
+@mixin schedule{
+
+  // ------------------Schedules style ------------------
+
+  .section{
+    margin: 1em 0 0.2em;
+    font-size: 0.8em;
+    color: #595959;
+    clear: both;
+  }
+  .info-value{
+    color: #184363;
+  }
+  .scheduleBtnCls{
+    background:none;
+    border:1px solid #3378A5;
+    color:#3378A5;
+  }
+}

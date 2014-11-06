@@ -29,14 +29,13 @@ Ext.application({
     'RaterController'
   ],
   stores: [
-    'BeforeLoginSlideListStore',
-    'AfterLoginSlideListStore',
+    'SlideNavListStore',
     'Raters',
     'NewsStore',
     'Videos'
   ],
   models: [
-    'BeforeLoginSlideList',
+    'SlideNavList',
     'Rater',
     'News',
     'Video'

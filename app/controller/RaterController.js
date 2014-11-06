@@ -17,7 +17,7 @@ Ext.define("RaterDashboard.controller.RaterController", {
       }
     }
   },
-  videoListTapped: function(list, index, target, record, e, eOpts) {
+  videoListTapped: function (list, index, target, record, e, eOpts) {
     var me = this;
     console.log(record.data.url);
     var url = record.data.url;
@@ -30,7 +30,6 @@ Ext.define("RaterDashboard.controller.RaterController", {
       type: 'slide',
       direction: 'left'
     });
-//    me.getVideoLinkSrc().play();
     me.getVideoLinkSrc().setUrl(url);
   }
 });
