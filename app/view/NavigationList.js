@@ -8,7 +8,7 @@ Ext.define('RaterDashboard.view.NavigationList', {
     itemTpl: '<div class="{iconCls}">{name}</div>',
     pinHeaders: true,
     grouped: true,
-    store: 'beforeLoginSlideListStore',
+    store: 'slideNavListStore',
     items: [
       {
 	xtype: 'panel',

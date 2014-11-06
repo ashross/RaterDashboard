@@ -30,14 +30,13 @@ Ext.application({
     'SchedulerController'
   ],
   stores: [
-    'BeforeLoginSlideListStore',
-    'AfterLoginSlideListStore',
+    'SlideNavListStore',
     'Raters',
     'NewsStore',
     'Videos'
   ],
   models: [
-    'BeforeLoginSlideList',
+    'SlideNavList',
     'Rater',
     'News',
     'Video'

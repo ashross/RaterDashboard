@@ -1,17 +1,56 @@
 @mixin list{
-  .instrumentsListCls.x-list{
-    .x-list-item{
-      padding: 5px;
-      .x-dock-horizontal{
-	border-top:2px solid #ffffff !important;
-	background: #3c668a;
-	.x-list-item-body{
-	  padding:6px 0px;
-	  min-height:50px !important;
-	}
+  
+  // --------------------------------Speaker list -----------------------------------------
+
+  .speakerListCls{
+    .avatar {
+      background-size: 40px 40px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding: 10px 0 10px 50px;
+    }
+  }
+
+  // --------------------------------Generic List Style ----------------------------------------------
+
+  .x-list{
+    .x-list-item.x-item-selected, .x-list-item.x-item-pressing, .x-list-item.x-item-pressed{
+      background: rgba(0, 0, 0, 0.5) !important;
+      border-top-color: #000000 !important;
+    }  
+  }
+
+  //--------------------------------News List -----------------------------------------------------
+
+  .newsListCls, .videoListCls{
+    .x-dataview-item{
+      padding: 10px 10px;
+      border-bottom: 1px solid #ccc;
+
+      .headingCls{
+	text-decoration: underline;
+	color:blue;
+	font-size: 14px;
+	padding-bottom: 5px;
+      }
+      .contentCls{
+	font-size: 13px;
       }
     }
   }
+
+  //--------------------------------Videos List -----------------------------------------------------
+
+  .videoListCls{
+    .title {
+      font-size: 18px;
+      text-decoration: underline;
+      padding-bottom: 10px;
+    }
+  } 
+
+  //--------------------------------AP Central List -----------------------------------------------------
+
   .APCentralListCls{
     border-bottom: 1px solid #ccc;
     .x-dataview-item{
@@ -29,22 +68,4 @@
       }
     }  
   }
-  /*  .listCls, .x-list{
-      background: #f7f7f7 !important;
-  
-      .x-list-item{
-	font-size: 12px;
-      }
-  
-      .x-list-header{
-	.x-innerhtml{
-	  padding:0 !important;
-	}
-      }
-  
-      .x-list-item.x-item-pressed, .x-list-item.x-item-selected{
-	background:#E5EE96 !important;
-	border-top-color: #C5CD7E !important;
-      }
-    }*/
 }

@@ -1,0 +1,56 @@
+@mixin icons{
+  
+  @include icon-font('icomoon', inline-font-files(
+  'icon/icomoon.woff', woff,
+  'icon/icomoon.ttf', truetype,
+  'icon/icomoon.svg', svg
+  ));
+
+  .loginIcon, .scheduleIcon, .speakerIcon, .sponsorIcon, .mapIcon, .infoIcon, .faceBookIcon, .twitterIcon{
+    font-family: 'icomoon';
+  }
+
+  .loginIcon:before{
+    content: "\e605";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .scheduleIcon:before{
+    content: "\e603";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .speakerIcon:before{
+    content: "\e600";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .sponsorIcon:before{
+    content: "\e609";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .mapIcon:before{
+    content: "\e601";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .infoIcon:before{
+    content: "\e607";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .faceBookIcon:before{
+    content: "\e60a";
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .twitterIcon:before{
+    content: "\e60b"; 
+    padding-right: 10px;
+    color:#0d87dc;
+  }
+  .raterNavListCls{
+    color:green
+  }
+}

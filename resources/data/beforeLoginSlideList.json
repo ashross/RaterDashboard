@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Login to RaterApp",
+    "iconCls": "loginIcon",
+    "type": ""
+  },
+  {
+    "name": "Raters",
+    "iconCls": "speakerIcon",
+    "type": "Rater"
+  },
+  {
+    "name": "Sponsors",
+    "iconCls": "sponsorIcon",
+    "type": "Rater"
+  },
+  {
+    "name": "More Info",
+    "iconCls": "infoIcon",
+    "type": "Rater"
+  },
+  {
+    "name": "Facebook",
+    "iconCls": "faceBookIcon",
+    "type": "Social"
+  },
+  {
+    "name": "Twitter",
+    "iconCls": "twitterIcon",
+    "type": "Social"
+  }
+]
