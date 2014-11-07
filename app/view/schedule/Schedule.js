@@ -33,7 +33,7 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
 	  {
 	    xtype: 'button',
 	    cls: 'scheduleBtnCls',
-        itemId:'checkInBtnId',
+	    itemId: 'checkInBtnId',
 	    text: 'Check in'
 	  }
 	]
@@ -52,7 +52,7 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
 	xtype: 'button',
 	margin: 10,
 	cls: 'scheduleBtnCls',
-	width:'25%',
+	width: '25%',
 	text: 'Provide Feedback'
       },
       {
@@ -64,7 +64,7 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
       },
       {
 	xtype: 'panel',
-	padding:10,
+	padding: 10,
 	html: [
 	  '<div class="avatar" style="background-image: url(https://s3.amazonaws.com/static.lanyrd.net/cropped-profile-photos/a07e1067f8f55b5be42b33a1cb2c19ef9899b6e2-s75.jpg);background-size: 40px 40px;background-position: left center;background-repeat: no-repeat;padding: 10px 0 10px 50px;">Aaron Conran</div>'
 	]

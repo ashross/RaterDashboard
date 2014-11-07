@@ -12,51 +12,49 @@ Ext.define("RaterDashboard.controller.SchedulerController", {
       backButton: 'mainCardGroup #backButtonId'
     },
     control: {
-        checkinBtn: {
+      checkinBtn: {
 	tap: 'checkinBtnTapped'
       }
     }
   },
-    checkinBtnTapped: function() {
+  checkinBtnTapped: function () {
     var me = this;
     console.log('tapped');
-     me.createCalendar();
+    me.createCalendar();
 
-},
-success:function (Obj){
-        var eventId=Obj;
-        
-        var me = this;
-        alert('in success');
-         console.log('success '+obj);
-        
-        return true;
-        
-    },
-    /**
-     * @method error
-     *error event for create and open calendar event
-     */
+  },
+  success: function (Obj) {
+    var eventId = Obj;
 
-    error:function (sub){
-        //alert('in failure');
-        console.log('error'+sub);
-    },
-           
+    var me = this;
+    alert('in success');
+    console.log('success ' + obj);
 
-    createCalendar:function(){
-         //alert('entering createCalendar');
-        var me = this;
-        var EventObj = {
-            "title": 'Rater Appointment',
-            "startDate":new Date(),
-            "endDate":new Date(),
-            "desc":"Rater Appointment Test",
-            "location":'Madrid'
-        };
-        window.plugins.AndroidCalendar.addCalendarEvent(EventObj,me.success,me.error);
+    return true;
 
-    }
+  },
+  /**
+   * @method error
+   *error event for create and open calendar event
+   */
+
+  error: function (sub) {
+    //alert('in failure');
+    console.log('error' + sub);
+  },
+  createCalendar: function () {
+    //alert('entering createCalendar');
+    var me = this;
+    var EventObj = {
+      "title": 'Rater Appointment',
+      "startDate": new Date(),
+      "endDate": new Date(),
+      "desc": "Rater Appointment Test",
+      "location": 'Madrid'
+    };
+    window.plugins.AndroidCalendar.addCalendarEvent(EventObj, me.success, me.error);
+
+  }
 });
 function validateEmail(checkEmail) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

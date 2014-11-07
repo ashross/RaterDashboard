@@ -92,27 +92,59 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
     } else if (record.data.name === 'Logout to RaterApp') {
       Ext.Msg.confirm('Alert', 'Are you sure you want to Logout?', function (id, value) {
 	if (id === 'yes') {
-	  GLOB.f.loadMask();
-	  Ext.Ajax.request({
-	    url: 'resources/data/beforeLoginSlideList.json',
-	    method: 'GET',
-	    success: function (response) {
-	      Ext.Viewport.unmask();
-	      var responseJason = JSON.parse(response.responseText);
-	      console.log(responseJason);
-	      var slideNavListStore = Ext.getStore('slideNavListStore');
-	      slideNavListStore.removeAll();
-	      slideNavListStore.setData(responseJason);
-	      me.getMainToolbar().setTitle('AP Central');
-	      me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
-		type: 'slide',
-		direction: 'right'
-	      });
+//	  GLOB.f.loadMask();
+//	  Ext.Ajax.request({
+//	    url: 'resources/data/beforeLoginSlideList.json',
+//	    method: 'GET',
+//	    success: function (response) {
+//	      Ext.Viewport.unmask();
+//	      var responseJason = JSON.parse(response.responseText);
+//	      console.log(responseJason);
+	  var data = [
+	    {
+	      "name": "Login to RaterApp",
+	      "iconCls": "loginIcon",
+	      "type": ""
 	    },
-	    failure: function (response) {
-	      Ext.Viewport.unmask();
+	    {
+	      "name": "Raters",
+	      "iconCls": "speakerIcon",
+	      "type": "Rater"
+	    },
+	    {
+	      "name": "Sponsors",
+	      "iconCls": "sponsorIcon",
+	      "type": "Rater"
+	    },
+	    {
+	      "name": "More Info",
+	      "iconCls": "infoIcon",
+	      "type": "Rater"
+	    },
+	    {
+	      "name": "Facebook",
+	      "iconCls": "faceBookIcon",
+	      "type": "Social"
+	    },
+	    {
+	      "name": "Twitter",
+	      "iconCls": "twitterIcon",
+	      "type": "Social"
 	    }
+	  ];
+	  var slideNavListStore = Ext.getStore('slideNavListStore');
+	  slideNavListStore.removeAll();
+	  slideNavListStore.setData(data);
+	  me.getMainToolbar().setTitle('AP Central');
+	  me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
+	    type: 'slide',
+	    direction: 'right'
 	  });
+//	    },
+//	    failure: function (response) {
+//	      Ext.Viewport.unmask();
+//	    }
+//	  });
 	}
       }, this);
       return false;
