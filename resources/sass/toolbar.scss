@@ -2,10 +2,21 @@
   $color:#10314b;
   $tabs-bar-gradient:'bevel';
 
-  @include sencha-toolbar-ui('mainToolbar', $color, $tabs-bar-gradient);
+  /*@include sencha-toolbar-ui('mainToolbar', $color, $tabs-bar-gradient);*/
+
+  .x-toolbar.x-docked-top{
+    background: #1d5a8a;
+    
+    .x-title, .x-button{
+      color:#fff;
+    }
+  }
+   
 
   .x-tabbar.x-docked-bottom{
-    @include background-gradient(darken($color, 2%), $tabs-bar-gradient);
+    /*@include background-gradient(darken($color, 2%), $tabs-bar-gradient);*/
+    
+    background: #1d5a8a;
 
     .x-tab {
       color: #FFFFFF;

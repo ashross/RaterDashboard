@@ -6,7 +6,7 @@ Ext.define("RaterDashboard.view.home.PreAP", {
     items: [
       {
 	xtype: 'panel',
-	padding: 10,
+	cls: 'pageHeadingCls',
 	html: 'Preparing Every Student for College'
       },
       {

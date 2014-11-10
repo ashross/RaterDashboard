@@ -46,8 +46,15 @@
 
   .bold{font-weight:bold !important;}
   .w49{width:49%;}
-  
+
+  .font13{font-size: 13px;}
   .x-layout-card-item{
-    background:#fff;
+    background:rgba(100, 155, 2, 0.1);
+  }
+  .x-dataview-inner.x-scroll-scroller{
+    padding:0px;
+  }
+  .doubleTopBordCls{
+    border-top: 3px double #1d5a8a;
   }
 }

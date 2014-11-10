@@ -1,12 +1,11 @@
-Ext.define("RaterDashboard.view.home.Home", {
+Ext.define("RaterDashboard.view.home.RaterHome", {
   extend: 'Ext.Container',
-  xtype: 'home',
+  xtype: 'raterHome',
   config: {
     scrollable: 'vertical',
     items: [
       {
 	xtype: 'panel',
-	docked: 'top',
 	cls: 'pageHeadingCls',
 	html: 'AP Central'
       },
@@ -30,8 +29,7 @@ Ext.define("RaterDashboard.view.home.Home", {
       },
       {
 	xtype: 'panel',
-	padding: 10,
-	style: 'border-bottom: 1px solid #ccc;color:#609C00',
+	cls: 'pageHeadingCls',
 	html: 'FEATURED ARTICLES'
       },
       {
@@ -52,15 +50,13 @@ Ext.define("RaterDashboard.view.home.Home", {
       },
       {
 	xtype: 'panel',
-	padding: 10,
-	style: 'border-bottom: 1px solid #ccc;color:#609C00',
+	cls: 'pageHeadingCls doubleTopBordCls mt15',
 	html: 'EXPLORE AP'
       },
       {
 	xtype: 'dataview',
 	store: null,
 	scrollable: null,
-	cls: 'newsListCls',
 	itemId: 'homeExploreListId',
 	itemTpl: [
 	  '<div class="headingCls">{title}</div>'

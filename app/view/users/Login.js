@@ -38,14 +38,13 @@ Ext.define('RaterDashboard.view.users.Login', {
 	  {
 	    xtype: 'button',
 	    text: 'Login',
-	    width: 80,
+	    width: 153,
 	    itemId: 'loginBtnId',
-	    cls: 'buttonCls ml10'
+	    cls: 'buttonCls'
 	  },
 	  {
 	    xtype: 'button',
 	    text: 'Forgot Password',
-	    style:'font-size:13px;',
 	    cls: 'transparentBtnCls ml10 font13',
 	    name: 'moveToForgetPasswordBtn'
 	  }
@@ -55,8 +54,7 @@ Ext.define('RaterDashboard.view.users.Login', {
 	xtype: 'button',
 	text: 'Create an Accoount',
 	margin: 10,
-	style:'font-size:13px;',
-	cls: 'transparentBtnCls',
+	cls: 'transparentBtnCls font13',
 	docked: 'bottom'
       }
     ]
