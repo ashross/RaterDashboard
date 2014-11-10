@@ -4,8 +4,12 @@ Ext.define('RaterDashboard.store.SlideNavListStore', {
     model: 'RaterDashboard.model.SlideNavList',
     storeId: 'slideNavListStore',
     sorters: 'type',
+//    sorters: [{
+//	property: 'type',
+//	direction: 'DESC'
+//      }],
     grouper: {
-      groupFn: function(item) {
+      groupFn: function (item) {
 	return item.get('type');
       }
     },

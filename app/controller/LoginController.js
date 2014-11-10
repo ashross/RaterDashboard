@@ -78,21 +78,21 @@ Ext.define("RaterDashboard.controller.LoginController", {
 	  "iconCls": "scheduleIcon",
 	  "type": "AP Rater"
 	},
-	{
-	  "name": "Raters",
-	  "iconCls": "speakerIcon",
-	  "type": "AP Rater"
-	},
-	{
-	  "name": "Sponsors",
-	  "iconCls": "sponsorIcon",
-	  "type": "AP Rater"
-	},
-	{
-	  "name": "Maps",
-	  "iconCls": "mapIcon",
-	  "type": "AP Rater"
-	},
+//	{
+//	  "name": "Raters",
+//	  "iconCls": "speakerIcon",
+//	  "type": "AP Rater"
+//	},
+//	{
+//	  "name": "Sponsors",
+//	  "iconCls": "sponsorIcon",
+//	  "type": "AP Rater"
+//	},
+//	{
+//	  "name": "Maps",
+//	  "iconCls": "mapIcon",
+//	  "type": "AP Rater"
+//	},
 	{
 	  "name": "More Info",
 	  "iconCls": "infoIcon",

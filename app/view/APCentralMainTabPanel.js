@@ -1,8 +1,11 @@
 Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
   extend: 'Ext.TabPanel',
   xtype: 'apCentralMainTabPanel',
-  requires:[
-    'RaterDashboard.view.APCentral'
+  requires: [
+    'RaterDashboard.view.APCentral',
+    'RaterDashboard.view.more.MoreCardGroup',
+    'RaterDashboard.view.facebook.FacebookCardGroup',
+    'RaterDashboard.view.users.Login'
   ],
   config: {
     tabBarPosition: 'bottom',
@@ -11,9 +14,24 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
     },
     items: [
       {
-	xtype:'apCentral',
+	xtype: 'apCentral',
 	title: 'Home',
 	iconCls: 'home'
+      },
+      {
+	xtype: 'facebookCardGroup',
+	title: 'Facebook',
+	iconCls: 'faceBookTabIcon'
+      },
+      {
+	title: 'Twitter',
+	iconCls: 'twitterTabIcon',
+	html: 'Twitter section'
+      },
+      {
+	xtype: 'moreCardGroup',
+	title: 'More Info',
+	iconCls: 'infoTabIcon'
       },
       {
 	title: 'Contact us',
@@ -21,9 +39,9 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
 	html: 'Contact us Screen'
       },
       {
-	title: 'More Info',
-	iconCls: 'info',
-	html: 'More Info Screen'
+	xtype: 'login',
+	title: 'Login',
+	iconCls: 'info'
       }
     ]
   }

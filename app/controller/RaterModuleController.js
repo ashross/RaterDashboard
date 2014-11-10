@@ -1,4 +1,4 @@
-Ext.define("RaterDashboard.controller.RaterController", {
+Ext.define("RaterDashboard.controller.RaterModuleController", {
   extend: 'Ext.app.Controller',
   config: {
     refs: {

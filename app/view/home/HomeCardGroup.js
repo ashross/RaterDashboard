@@ -7,7 +7,7 @@ Ext.define("RaterDashboard.view.home.HomeCardGroup", {
     'RaterDashboard.view.home.PreAP',
     'RaterDashboard.view.home.TeacherCommunity',
     'RaterDashboard.view.home.PrefessionalDevelopment',
-    'RaterDashboard.view.home.APReader',
+    'RaterDashboard.view.home.APReader'
   ],
   config: {
     layout:'card',

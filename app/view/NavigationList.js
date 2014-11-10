@@ -5,7 +5,7 @@ Ext.define('RaterDashboard.view.NavigationList', {
   config: {
     cls: 'nav-list',
     itemId: 'slideNavListId',
-    itemTpl: '<div class="{iconCls}">{name}</div>',
+    itemTpl: '<div class="{iconCls}"><span>{name}</span></div>',
     pinHeaders: true,
     grouped: true,
     store: 'slideNavListStore',

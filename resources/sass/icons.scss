@@ -1,5 +1,5 @@
 @mixin icons{
-  
+
   @include icon-font('icomoon', inline-font-files(
   'icon/icomoon.woff', woff,
   'icon/icomoon.ttf', truetype,
@@ -8,49 +8,60 @@
 
   .loginIcon, .scheduleIcon, .speakerIcon, .sponsorIcon, .mapIcon, .infoIcon, .faceBookIcon, .twitterIcon{
     font-family: 'icomoon';
+    span{
+      font-size: 1em;
+      position: relative;
+      top: -8px;
+    }
   }
-
+  
+  .loginIcon:before, .scheduleIcon:before, .speakerIcon:before, .sponsorIcon:before, .mapIcon:before, .infoIcon:before, 
+  .faceBookIcon:before, .twitterIcon:before{
+    padding-right: 10px;
+    color:#fff;
+    font-size: 1.6em;
+  }
   .loginIcon:before{
     content: "\e605";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .scheduleIcon:before{
     content: "\e603";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .speakerIcon:before{
     content: "\e600";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .sponsorIcon:before{
     content: "\e609";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .mapIcon:before{
     content: "\e601";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .infoIcon:before{
     content: "\e607";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .faceBookIcon:before{
     content: "\e60a";
-    padding-right: 10px;
-    color:#0d87dc;
   }
   .twitterIcon:before{
-    content: "\e60b"; 
-    padding-right: 10px;
-    color:#0d87dc;
+    content: "\e60b";
   }
   .raterNavListCls{
-    color:green
+    color:#fff;
+    font-size: 1em;
   }
+  
+  // Tab icons
+  
+  
+  .faceBookTabIcon:before{
+    content: "\e60a";
+  }
+  .twitterTabIcon:before{
+    content: "\e60b";
+  }
+  .infoTabIcon:before{
+    content: "\e607";
+  }
+ 
+  
 }

@@ -1,4 +1,4 @@
-Ext.define("RaterDashboard.controller.MainController", {
+Ext.define("RaterDashboard.controller.APCentralController", {
   extend: 'Ext.app.Controller',
   config: {
     refs: {
@@ -23,21 +23,21 @@ Ext.define("RaterDashboard.controller.MainController", {
 	"iconCls": "loginIcon",
 	"type": ""
       },
-      {
-	"name": "Raters",
-	"iconCls": "speakerIcon",
-	"type": "Rater"
-      },
-      {
-	"name": "Sponsors",
-	"iconCls": "sponsorIcon",
-	"type": "Rater"
-      },
-      {
-	"name": "More Info",
-	"iconCls": "infoIcon",
-	"type": "Rater"
-      },
+//      {
+//	"name": "Raters",
+//	"iconCls": "speakerIcon",
+//	"type": "Rater"
+//      },
+//      {
+//	"name": "Sponsors",
+//	"iconCls": "sponsorIcon",
+//	"type": "Rater"
+//      },
+//      {
+//	"name": "More Info",
+//	"iconCls": "infoIcon",
+//	"type": "Rater"
+//      },
       {
 	"name": "Facebook",
 	"iconCls": "faceBookIcon",
@@ -61,7 +61,7 @@ Ext.define("RaterDashboard.controller.MainController", {
 	var slideNavListStore = Ext.getStore('slideNavListStore');
 	slideNavListStore.setData(data);
 //	console.log('-------Store---------');
-	console.log(slideNavListStore);
+//	console.log(slideNavListStore);
 //	console.log('----------------');
 //      },
 //      failure: function (response) {

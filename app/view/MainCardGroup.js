@@ -3,14 +3,14 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
   xtype: 'mainCardGroup',
   requires: [
     'RaterDashboard.view.APCentralMainTabPanel',
-    'RaterDashboard.view.users.Login',
-    'RaterDashboard.view.maps.Maps',
-    'RaterDashboard.view.more.MoreCardGroup',
+//    'RaterDashboard.view.users.Login',
+//    'RaterDashboard.view.maps.Maps',
+//    'RaterDashboard.view.more.MoreCardGroup',
     'RaterDashboard.view.sponsor.Sponsor',
     'RaterDashboard.view.schedule.Schedule',
     'RaterDashboard.view.rater.Rater',
     'RaterDashboard.view.home.HomeMainTabPanel',
-    'RaterDashboard.view.facebook.FacebookCardGroup',
+//    'RaterDashboard.view.facebook.FacebookCardGroup',
     'RaterDashboard.view.video.VideoCardGroup'
   ],
   config: {
@@ -41,12 +41,12 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
       {
 	xtype: 'apCentralMainTabPanel'
       },
-      {
-	xtype: 'login'
-      },
-      {
-	xtype: 'maps'
-      },
+//      {
+//	xtype: 'login'
+//      },
+//      {
+//	xtype: 'maps'
+//      },
       {
 	xtype: 'sponsor'
       },
@@ -59,15 +59,15 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
       {
 	xtype: 'videoCardGroup'
       },
-      {
-	xtype: 'moreCardGroup'
-      },
+//      {
+//	xtype: 'moreCardGroup'
+//      },
       {
 	xtype: 'homeMainTabPanel'
-      },
-      {
-	xtype: 'facebookCardGroup'
       }
+//      {
+//	xtype: 'facebookCardGroup'
+//      }
     ]
   }
 });

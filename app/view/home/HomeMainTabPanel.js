@@ -17,14 +17,30 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
 	iconCls: 'home'
       },
       {
+	xtype: 'facebookCardGroup',
+	title: 'Facebook',
+	iconCls: 'faceBookTabIcon'
+      },
+      {
+	title: 'Twitter',
+	iconCls: 'twitterTabIcon',
+	html: 'Twitter section'
+      },
+      {
 	title: 'Contact us',
 	iconCls: 'user',
 	html: 'Contact us Screen'
       },
       {
+	xtype: 'moreCardGroup',
 	title: 'More Info',
-	iconCls: 'info',
-	html: 'More Info Screen'
+	iconCls: 'infoTabIcon'
+      },
+      {
+//	xtype: 'logout',
+	title: 'Logout',
+	iconCls: 'logoutIcon',
+	html: 'Logout Screen'
       }
     ]
   }

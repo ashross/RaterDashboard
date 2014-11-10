@@ -1,6 +1,6 @@
 @mixin toolbar{
   $color:#10314b;
-  $tabs-bar-gradient:'matte';
+  $tabs-bar-gradient:'bevel';
 
   @include sencha-toolbar-ui('mainToolbar', $color, $tabs-bar-gradient);
 
