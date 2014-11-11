@@ -40,6 +40,10 @@
 			"path": "phonegap.js",
 			"remote": true
 		},
+		{
+			"path": "facebookConnectPlugin.js"
+			
+		},
 		
 	{
           "path" : "phonegap/plugins/com.bez4pieci.cookies/www/cookies.js"

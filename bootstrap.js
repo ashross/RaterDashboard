@@ -17,6 +17,7 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "RaterDashboard": "app",
+  "RaterDashboard.controller.FaceBookController": "app/controller/FaceBookController .js",
   "RaterDashboard.view.more.AboutRater": "app/view/more/aboutRater.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
@@ -640,11 +641,12 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "RaterDashboard.Utilities": [],
+  "RaterDashboard.controller.APCentralController": [],
+  "RaterDashboard.controller.FaceBookController": [],
   "RaterDashboard.controller.HomeController": [],
   "RaterDashboard.controller.LoginController": [],
-  "RaterDashboard.controller.MainController": [],
   "RaterDashboard.controller.MoreController": [],
-  "RaterDashboard.controller.RaterController": [],
+  "RaterDashboard.controller.RaterModuleController": [],
   "RaterDashboard.controller.SchedulerController": [],
   "RaterDashboard.controller.SlideNavController": [],
   "RaterDashboard.model.News": [],
@@ -1401,11 +1403,12 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "RaterDashboard.Utilities": [],
+  "RaterDashboard.controller.APCentralController": [],
+  "RaterDashboard.controller.FaceBookController": [],
   "RaterDashboard.controller.HomeController": [],
   "RaterDashboard.controller.LoginController": [],
-  "RaterDashboard.controller.MainController": [],
   "RaterDashboard.controller.MoreController": [],
-  "RaterDashboard.controller.RaterController": [],
+  "RaterDashboard.controller.RaterModuleController": [],
   "RaterDashboard.controller.SchedulerController": [],
   "RaterDashboard.controller.SlideNavController": [],
   "RaterDashboard.model.News": [],
