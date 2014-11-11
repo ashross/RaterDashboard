@@ -6,7 +6,7 @@ Ext.define("RaterDashboard.view.home.CoursesAndExams", {
     items: [
       {
 	xtype: 'panel',
-	padding: 10,
+	cls: 'pageHeadingCls',
 	html: 'AP Courses and Exams'
       },
       {

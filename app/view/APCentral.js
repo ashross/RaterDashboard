@@ -6,7 +6,6 @@ Ext.define("RaterDashboard.view.APCentral", {
     items: [
       {
 	xtype: 'panel',
-	docked: 'top',
 	cls: 'pageHeadingCls',
 	html: 'AP Central'
       },
@@ -23,15 +22,14 @@ Ext.define("RaterDashboard.view.APCentral", {
 	itemId: 'APCentralListId',
 	inline: true,
 	itemTpl: [
-	  '<div><img src="{imgSrc}" /></div>' +
+	  '<div align="center"><img src="{imgSrc}" /></div>' +
 		  '<div class="headingCls">{headingLink}</div>' +
 		  '<div class="contentCls">{content}</div>'
 	]
       },
       {
 	xtype: 'panel',
-	padding: 10,
-	style: 'font-size:20px;',
+	cls: 'pageHeadingCls',
 	html: 'News'
       },
       {

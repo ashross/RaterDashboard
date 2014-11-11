@@ -1,5 +1,5 @@
 @mixin list{
-  
+
   // --------------------------------Speaker list -----------------------------------------
 
   .speakerListCls{
@@ -14,27 +14,58 @@
   // --------------------------------Generic List Style ----------------------------------------------
 
   .x-list{
+    .x-list-item{
+      border-bottom: 1px solid #1d5a8a !important;
+      .headingCls{
+	color:#1d5a8a;
+	font-size: 16px;
+	font-weight: bold;
+      }
+    }
     .x-list-item.x-item-selected, .x-list-item.x-item-pressing, .x-list-item.x-item-pressed{
-      background: rgba(0, 0, 0, 0.5) !important;
-      border-top-color: #000000 !important;
+      background:rgba(100, 155, 2, 0.3) !important;
+      border-top-color: transparent !important;
     }  
+  }
+
+  .x-dataview{
+    .x-dataview-item{
+      padding: 10px;
+      border-bottom: 1px solid #1d5a8a;
+      .headingCls{
+	color:#1d5a8a;
+	font-size: 16px;
+	font-weight: bold;
+      }
+      &.x-item-pressed, &.x-item-pressing{
+	background:rgba(100, 155, 2, 0.3) !important;
+	border-top-color: transparent !important;
+      }
+    }
+
   }
 
   //--------------------------------News List -----------------------------------------------------
 
   .newsListCls, .videoListCls{
     .x-dataview-item{
-      padding: 10px 10px;
-      border-bottom: 1px solid #ccc;
-
+      padding: 10px;
+      border: 1px solid #333;
+      margin: 10px 5px 0px;
+      color:#000;
+      box-shadow:1px 3px 5px #333;
+      background: #fff;
       .headingCls{
-	text-decoration: underline;
-	color:blue;
-	font-size: 14px;
-	padding-bottom: 5px;
+	color:#1d5a8a;
+	font-size: 16px;
+	font-weight: bold;
       }
       .contentCls{
 	font-size: 13px;
+      }
+      &.x-item-pressed, &.x-item-pressing{
+	background:rgba(100, 155, 2, 0.3) !important;
+	border-top-color: transparent !important;
       }
     }
   }
@@ -52,19 +83,29 @@
   //--------------------------------AP Central List -----------------------------------------------------
 
   .APCentralListCls{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 3px double #1d5a8a;
+    padding-bottom: 10px;
     .x-dataview-item{
       padding: 10px;
-      width:33%;
+      width:32%;
+      margin:5px;
+      color:#000;
+      border: 1px solid #333;
+      box-shadow: 1px 3px 5px #333;
+      background: #fff;
       display: inline-block !important;
       .headingCls{
-	text-decoration: underline;
-	color:blue;
-	font-size: 14px;
+	color:#1d5a8a;
+	font-size: 16px;
+	font-weight: bold;
 	padding-bottom: 5px;
       }
       .contentCls{
 	font-size: 13px;
+      }
+      &.x-item-pressed, &.x-item-pressing{
+	background:rgba(100, 155, 2, 0.3) !important;
+	border-top-color: transparent !important;
       }
     }  
   }
