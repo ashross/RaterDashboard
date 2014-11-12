@@ -27,7 +27,8 @@ Ext.application({
     'MoreController',
     'APCentralController',
     'RaterModuleController',
-    'SchedulerController'
+    'SchedulerController',
+    'FaceBookController'
   ],
   stores: [
     'SlideNavListStore',
@@ -57,6 +58,11 @@ Ext.application({
     '1496x2048': 'resources/startup/1496x2048.png'
   },
   launch: function() {
+  
+    window.onerror = function(message, url, lineNumber) {
+        console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+    }
+
 
 //    Ext.getBody().insertHtml('beforeEnd', '<div id="fb-root" style="display: none;"></div>');
 //

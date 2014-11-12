@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -95,6 +99,9 @@
             "PACKAGE_NAME": "org.ets.rater.dashboard"
         },
         "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "org.ets.rater.dashboard"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "org.ets.rater.dashboard"
         }
     },
