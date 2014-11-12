@@ -118,7 +118,7 @@ Ext.define("RaterDashboard.controller.LoginController", {
 	type: 'slide',
 	direction: 'left'
       });
-      me.getSlideNavList().select(1);
+      me.getSlideNavList().select(5);
     }
   }
 });

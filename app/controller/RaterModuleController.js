@@ -62,20 +62,29 @@ Ext.define("RaterDashboard.controller.RaterModuleController", {
     }
   },
   swipeDirection: function (container, value, oldValue, eOpts) {
-//    alert();
-
     var me = this;
-    console.log(container.getActiveItem().getItemId());
-
     var cardNum = container.activeIndex;
-//    console.log(cardNum);
-//    console.log(container.animationDirection);
-//    console.log(me.getSlideNavList());
-    me.getSlideNavList().select(cardNum + 1);
     if (cardNum === 0) {
-      me.getMainToolbar().setTitle();
+      me.getMainToolbar().setTitle('Rater Home');
+      me.getSlideNavList().select(5);
     } else if (cardNum === 1) {
-      me.getMainToolbar().setTitle();
+      me.getMainToolbar().setTitle('Courses & Exams');
+      me.getSlideNavList().select(2);
+    } else if (cardNum === 2) {
+      me.getMainToolbar().setTitle('PreAP &reg;');
+      me.getSlideNavList().select(3);
+    } else if (cardNum === 3) {
+      me.getMainToolbar().setTitle('Teacher Community');
+      me.getSlideNavList().select(1);
+    } else if (cardNum === 4) {
+      me.getMainToolbar().setTitle('Prefessional Development');
+      me.getSlideNavList().select(4);
+    } else if (cardNum === 5) {
+      me.getMainToolbar().setTitle('AP Reader');
+      me.getSlideNavList().select(6);
+    } else if (cardNum === 6) {
+      me.getMainToolbar().setTitle('Videos');
+      me.getSlideNavList().select(7);
     }
   }
 });

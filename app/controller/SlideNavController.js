@@ -11,7 +11,9 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       // Home card group
       homeCardGroup: 'homeCardGroup',
       // Main Tab Panel
-      homeMainTabPanel: 'homeMainTabPanel'
+      homeMainTabPanel: 'homeMainTabPanel',
+      // before login tab panel
+      apCentralMainTabPanel: 'apCentralMainTabPanel'
 
     },
     control: {
@@ -43,7 +45,8 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
     console.log(record.data.name);
     if (record.data.name === 'Login to RaterApp') {
       me.getMainToolbar().setTitle('Login');
-      me.getMainCardGroup().animateActiveItem('login', {
+
+      me.getApCentralMainTabPanel().animateActiveItem('login', {
 	type: 'slide',
 	direction: 'left'
       });
@@ -142,11 +145,33 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       }, this);
       return false;
     } else if (record.data.name === 'Facebook') {
+      var slideNavListStore = Ext.getStore('slideNavListStore');
       me.getMainToolbar().setTitle('Facebook Login');
-      me.getMainCardGroup().animateActiveItem('facebookCardGroup', {
-	type: 'slide',
-	direction: 'left'
-      });
+      if (slideNavListStore.getCount() === 3) {
+	me.getApCentralMainTabPanel().animateActiveItem('facebookLogin', {
+	  type: 'slide',
+	  direction: 'left'
+	});
+      } else {
+	me.getHomeMainTabPanel().animateActiveItem('facebookLogin', {
+	  type: 'slide',
+	  direction: 'left'
+	});
+      }
+    } else if (record.data.name === 'Twitter') {
+      var slideNavListStore = Ext.getStore('slideNavListStore');
+      me.getMainToolbar().setTitle('Twitter');
+      if (slideNavListStore.getCount() === 3) {
+	me.getApCentralMainTabPanel().animateActiveItem('twitterLogin', {
+	  type: 'slide',
+	  direction: 'left'
+	});
+      } else {
+	me.getHomeMainTabPanel().animateActiveItem('twitterLogin', {
+	  type: 'slide',
+	  direction: 'left'
+	});
+      }
     } else if (record.data.name === 'Videos') {
       me.getMainToolbar().setTitle(record.data.name);
       me.getMainCardGroup().animateActiveItem('videoCardGroup', {

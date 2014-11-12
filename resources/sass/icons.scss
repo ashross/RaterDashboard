@@ -6,22 +6,22 @@
   'icon/icomoon.svg', svg
   ));
 
-  .loginIcon, .scheduleIcon, .infoIcon, .faceBookIcon, .twitterIcon, .logoutIcon{
+  .loginIcon, .scheduleIcon, .infoIcon, .faceBookIcon, .twitterIcon, .logoutIcon, .raterNavListCls, .backBtnIcon{
     //.speakerIcon, .sponsorIcon, .mapIcon,
     font-family: 'icomoon';
     span{
-      font-size: 1em;
+      font-size: .9em;
       position: relative;
-      top: -8px;
+      top: -5px;
     }
   }
 
   .loginIcon:before, .scheduleIcon:before, .infoIcon:before, 
-    .faceBookIcon:before, .twitterIcon:before, .loginIcon:before, .logoutIcon:before{
+    .faceBookIcon:before, .twitterIcon:before, .loginIcon:before, .logoutIcon:before, .raterNavListCls:before, .backBtnIcon:before{
     //.speakerIcon:before, .sponsorIcon:before, .mapIcon:before,
     padding-right: 10px;
     color:#fff;
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   .loginIcon:before{
     content: "\e60b";
@@ -47,15 +47,19 @@
   .twitterIcon:before{
     content: "\e60e";
   }
-  .raterNavListCls{
-    color:#fff;
-    font-size: 1em;
+  .raterNavListCls:before{
+/*    color:#fff;
+    font-size: 1em;*/
+content: "\e608";
   }
   .loginIcon:before{
     content: "\e60b";
   }
   .logoutIcon:before{
     content: "\e60c";
+  }
+  .backBtnIcon:before{
+    content: "\e60f";
   }
 
   // Tab icons

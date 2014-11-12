@@ -14,7 +14,7 @@ Ext.define("RaterDashboard.view.home.HomeCardGroup", {
     itemId: 'homeCarouselViewId',
     indicator: false,
     activeItem: 0,
-    cls: 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww swipeCardsCls',
+    cls: 'swipeCardsCls',
     items: [
       {
 	xtype: 'raterHome',

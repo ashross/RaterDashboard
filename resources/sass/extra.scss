@@ -46,6 +46,13 @@
 
   .bold{font-weight:bold !important;}
   .w49{width:49%;}
+  
+  .doubleTopBordCls, .bordT{
+    border-top: 1px solid #649b02;
+  }
+  .bordB{
+    border-bottom: 1px solid #649b02;
+  }
 
   .font13{font-size: 13px;}
   .x-layout-card-item{
@@ -55,9 +62,7 @@
   .x-dataview-inner.x-scroll-scroller{
     padding:0px;
   }
-  .doubleTopBordCls{
-    border-top: 1px solid #649b02;
-  }
+  
   .x-form-fieldset{
 
     .x-form-fieldset-inner{

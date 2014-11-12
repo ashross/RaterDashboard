@@ -11,45 +11,67 @@ Ext.define('RaterDashboard.view.home.VideoList', {
       {
 	xtype: 'panel',
 	padding: 10,
-	html: 'What happens at the AP Reading?'
+	cls:'alignC',
+	html: '<b>What happens at the AP Reading?</b>'
       },
       {
 	xtype: 'video',
 //	itemId: 'videoLinkSrcId',
 	height: 200,
-	width: '99%',
+	width: '50%',
 	url: 'resources/data/videos/AP_Reader_Recruitment_What.mp4',
-	style: 'margin:25px auto 0',
+	margin:'0 auto',
 	posterUrl: 'resources/images/videoThumbnails-01.jpg'
+      },
+      {
+	xtype: 'panel',
+	padding:10,
+	cls:'alignC bordB',
+	html: 'Watch Video'
       },
       // first
       {
 	xtype: 'panel',
 	padding: 10,
-	html: 'How do I apply?'
+	cls:'alignC',
+	html: '<b>How do I apply?</b>'
       },
       {
 	xtype: 'video',
 //	itemId: 'videoLinkSrcId',
 	height: 200,
-	width: '99%',
+	width: '50%',
 	url: 'resources/data/videos/AP_Reader_Recruitment_How.mp4',
-	style: 'margin:25px auto 0',
+	margin:'0 auto',
 	posterUrl: 'resources/images/videoThumbnails-02.jpg'
+      },
+      {
+	xtype: 'panel',
+	padding:10,
+	cls:'alignC bordB',
+	html: 'Watch Video'
       },
       // first
       {
 	xtype: 'panel',
-	html: 'What makes the AP Reading so special?'
+	padding:10,
+	cls:'alignC',
+	html: '<b>What makes the AP Reading so special?</b>'
       },
       {
 	xtype: 'video',
 	itemId: 'videoLinkSrcId',
 	height: 200,
-	width: '99%',
+	width: '50%',
 	url: 'resources/data/videos/AP_Reader_Recruitment_Testimonial.mp4',
-	style: 'margin:25px auto 0',
+	margin:'0 auto',
 	posterUrl: 'resources/images/videoThumbnails-03.jpg'
+      },
+      {
+	xtype: 'panel',
+	padding:10,
+	cls:'alignC bordB',
+	html: 'Watch Video'
       }
     ]
   }

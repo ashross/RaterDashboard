@@ -4,7 +4,8 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
   requires: [
     'RaterDashboard.view.APCentral',
     'RaterDashboard.view.more.MoreCardGroup',
-    'RaterDashboard.view.facebook.FacebookCardGroup',
+    'RaterDashboard.view.facebook.FacebookLogin',
+    'RaterDashboard.view.twitter.TwitterLogin',
     'RaterDashboard.view.users.Login'
   ],
   config: {
@@ -19,14 +20,14 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
 	iconCls: 'home'
       },
       {
-	xtype: 'facebookCardGroup',
+	xtype: 'facebookLogin',
 	title: 'Facebook',
 	iconCls: 'faceBookTabIcon'
       },
       {
+	xtype: 'twitterLogin',
 	title: 'Twitter',
-	iconCls: 'twitterTabIcon',
-	html: 'Twitter section'
+	iconCls: 'twitterTabIcon'
       },
       {
 	xtype: 'moreCardGroup',
@@ -37,13 +38,12 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
 	title: 'Contact us',
 	iconCls: 'contactusTabIcon',
 	html: 'Contact us Screen'
+      },
+      {
+	xtype: 'login',
+	title: 'Login',
+	iconCls: 'loginTabIcon'
       }
-//      ,
-//      {
-//	xtype: 'login',
-//	title: 'Login',
-//	iconCls: 'loginTabIcon'
-//      }
     ]
   }
 });

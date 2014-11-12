@@ -33,7 +33,8 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 	    xtype: 'button',
 	    hidden: true,
 	    itemId: 'backButtonId',
-	    text: '<',
+	    text: '',
+	    iconCls:'backBtnIcon',
 	    ui: 'plain'
 	  }
 	]

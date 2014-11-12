@@ -643,7 +643,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.Utilities": [],
   "RaterDashboard.controller.APCentralController": [],
   "RaterDashboard.controller.FaceBookController": [],
-  "RaterDashboard.controller.HomeController": [],
   "RaterDashboard.controller.LoginController": [],
   "RaterDashboard.controller.MoreController": [],
   "RaterDashboard.controller.RaterModuleController": [],
@@ -666,12 +665,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.facebook.FacebookLogin": [],
   "RaterDashboard.view.home.APReader": [],
   "RaterDashboard.view.home.CoursesAndExams": [],
-  "RaterDashboard.view.home.Home": [],
   "RaterDashboard.view.home.HomeCardGroup": [],
   "RaterDashboard.view.home.HomeMainTabPanel": [],
   "RaterDashboard.view.home.PreAP": [],
   "RaterDashboard.view.home.PrefessionalDevelopment": [],
+  "RaterDashboard.view.home.RaterHome": [],
   "RaterDashboard.view.home.TeacherCommunity": [],
+  "RaterDashboard.view.home.VideoList": [],
   "RaterDashboard.view.maps.Maps": [],
   "RaterDashboard.view.more.AboutRater": [],
   "RaterDashboard.view.more.MoreCardGroup": [],
@@ -680,10 +680,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.rater.Rater": [],
   "RaterDashboard.view.schedule.Schedule": [],
   "RaterDashboard.view.sponsor.Sponsor": [],
-  "RaterDashboard.view.users.Login": [],
-  "RaterDashboard.view.video.VideoCardGroup": [],
-  "RaterDashboard.view.video.VideoLinks": [],
-  "RaterDashboard.view.video.VideoList": []
+  "RaterDashboard.view.users.Login": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1405,7 +1402,6 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.Utilities": [],
   "RaterDashboard.controller.APCentralController": [],
   "RaterDashboard.controller.FaceBookController": [],
-  "RaterDashboard.controller.HomeController": [],
   "RaterDashboard.controller.LoginController": [],
   "RaterDashboard.controller.MoreController": [],
   "RaterDashboard.controller.RaterModuleController": [],
@@ -1446,9 +1442,6 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.view.home.CoursesAndExams": [
     "widget.coursesAndExams"
   ],
-  "RaterDashboard.view.home.Home": [
-    "widget.home"
-  ],
   "RaterDashboard.view.home.HomeCardGroup": [
     "widget.homeCardGroup"
   ],
@@ -1461,8 +1454,14 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.view.home.PrefessionalDevelopment": [
     "widget.prefessionalDevelopment"
   ],
+  "RaterDashboard.view.home.RaterHome": [
+    "widget.raterHome"
+  ],
   "RaterDashboard.view.home.TeacherCommunity": [
     "widget.teacherCommunity"
+  ],
+  "RaterDashboard.view.home.VideoList": [
+    "widget.videoList"
   ],
   "RaterDashboard.view.maps.Maps": [
     "widget.maps"
@@ -1490,14 +1489,5 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "RaterDashboard.view.users.Login": [
     "widget.login"
-  ],
-  "RaterDashboard.view.video.VideoCardGroup": [
-    "widget.videoCardGroup"
-  ],
-  "RaterDashboard.view.video.VideoLinks": [
-    "widget.videoLinks"
-  ],
-  "RaterDashboard.view.video.VideoList": [
-    "widget.videoList"
   ]
 });

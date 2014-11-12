@@ -2,7 +2,9 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
   extend: 'Ext.TabPanel',
   xtype: 'homeMainTabPanel',
   requires: [
-    'RaterDashboard.view.home.HomeCardGroup'
+    'RaterDashboard.view.home.HomeCardGroup',
+    'RaterDashboard.view.facebook.FacebookLogin',
+    'RaterDashboard.view.twitter.TwitterLogin'
   ],
   config: {
     tabBarPosition: 'bottom',
@@ -16,14 +18,14 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
 	iconCls: 'home'
       },
       {
-	xtype: 'facebookCardGroup',
+	xtype: 'facebookLogin',
 	title: 'Facebook',
 	iconCls: 'faceBookTabIcon'
       },
       {
+	xtype:'twitterLogin',
 	title: 'Twitter',
-	iconCls: 'twitterTabIcon',
-	html: 'Twitter section'
+	iconCls: 'twitterTabIcon'
       },
       {
 	xtype: 'moreCardGroup',
@@ -34,14 +36,13 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
 	title: 'Contact us',
 	iconCls: 'contactusTabIcon',
 	html: 'Contact us Screen'
-      }
-//      ,
-//      {
+      },
+      {
 //	xtype: 'logout',
-//	title: 'Logout',
-//	iconCls: 'logoutTabIcon',
-//	html: 'Logout Screen'
-//      }
+	title: 'Logout',
+	iconCls: 'logoutTabIcon',
+	html: 'Logout Screen'
+      }
     ]
   }
 });
