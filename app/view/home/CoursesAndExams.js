@@ -16,7 +16,7 @@ Ext.define("RaterDashboard.view.home.CoursesAndExams", {
 	xtype: 'dataview',
 	store: null,
 	scrollable: null,
-	cls: 'newsListCls',
+	cls: 'contentListCls',
 	itemTpl: [
 	  '<div class="headingCls" style="text-decoration: blink;">{title}</div>' +
 		  '<div class="">{content}</div>'

@@ -25,7 +25,7 @@ Ext.define("RaterDashboard.view.home.RaterHome", {
 	itemId: 'APCentralListId',
 	inline: true,
 	itemTpl: [
-	  '<div><img src="{imgSrc}" /></div>' +
+	  '<div align="center"><img src="{imgSrc}" /></div>' +
 		  '<div class="headingCls">{headingLink}</div>' +
 		  '<div class="contentCls">{content}</div>'
 	]

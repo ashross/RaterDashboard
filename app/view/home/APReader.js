@@ -16,9 +16,7 @@ Ext.define("RaterDashboard.view.home.APReader", {
 	xtype: 'dataview',
 	store: null,
 	scrollable: null,
-	cls: '',
-	padding: 10,
-	style: 'font-size: 13px;',
+	cls: 'contentListCls',
 	itemTpl: [
 	  '<div class="">{content}</div>'
 	],

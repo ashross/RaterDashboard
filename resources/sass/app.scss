@@ -11,6 +11,7 @@
 @import 'schedule.scss';
 @import 'login.scss';
 @import 'raterHome.scss';
+@import 'alertBox.scss';
 
 
 @include toolbar;
@@ -23,5 +24,6 @@
 @include schedule;
 @include login;
 @include raterHome;
+@include alertBox;
 
 /*@include icon('user');*/
