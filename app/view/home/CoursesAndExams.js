@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.home.CoursesAndExams", {
   extend: 'Ext.Container',
   xtype: 'coursesAndExams',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

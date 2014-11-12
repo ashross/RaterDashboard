@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.home.APReader", {
   extend: 'Ext.Container',
   xtype: 'apReader',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

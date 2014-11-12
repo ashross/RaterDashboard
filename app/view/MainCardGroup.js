@@ -6,12 +6,12 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 //    'RaterDashboard.view.users.Login',
 //    'RaterDashboard.view.maps.Maps',
 //    'RaterDashboard.view.more.MoreCardGroup',
-    'RaterDashboard.view.sponsor.Sponsor',
+//    'RaterDashboard.view.sponsor.Sponsor',
     'RaterDashboard.view.schedule.Schedule',
-    'RaterDashboard.view.rater.Rater',
-    'RaterDashboard.view.home.HomeMainTabPanel',
+//    'RaterDashboard.view.rater.Rater',
+    'RaterDashboard.view.home.HomeMainTabPanel'
 //    'RaterDashboard.view.facebook.FacebookCardGroup',
-    'RaterDashboard.view.video.VideoCardGroup'
+//    'RaterDashboard.view.video.VideoCardGroup'
   ],
   config: {
     layout: 'card',
@@ -47,18 +47,18 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 //      {
 //	xtype: 'maps'
 //      },
-      {
-	xtype: 'sponsor'
-      },
+//      {
+//	xtype: 'sponsor'
+//      },
       {
 	xtype: 'schedule'
       },
-      {
-	xtype: 'rater'
-      },
-      {
-	xtype: 'videoCardGroup'
-      },
+//      {
+//	xtype: 'rater'
+//      },
+//      {
+//	xtype: 'videoCardGroup'
+//      },
 //      {
 //	xtype: 'moreCardGroup'
 //      },

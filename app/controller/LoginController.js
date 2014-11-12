@@ -32,6 +32,8 @@ Ext.define("RaterDashboard.controller.LoginController", {
       Ext.Msg.alert('Error', "Password is wrong");
     } else {
       console.log('loggedin');
+      var slideNavListStore = Ext.getStore('slideNavListStore');
+      slideNavListStore.removeAll();
       var data = [
 	{
 	  "name": "Logout to RaterApp",
@@ -93,11 +95,11 @@ Ext.define("RaterDashboard.controller.LoginController", {
 //	  "iconCls": "mapIcon",
 //	  "type": "AP Rater"
 //	},
-	{
-	  "name": "More Info",
-	  "iconCls": "infoIcon",
-	  "type": "AP Rater"
-	},
+//	{
+//	  "name": "More Info",
+//	  "iconCls": "infoIcon",
+//	  "type": "AP Rater"
+//	},
 	{
 	  "name": "Facebook",
 	  "iconCls": "faceBookIcon",
@@ -109,34 +111,14 @@ Ext.define("RaterDashboard.controller.LoginController", {
 	  "type": "Social"
 	}
       ];
-//      GLOB.f.loadMask();
-//      Ext.Ajax.request({
-//	url: 'resources/data/afterLoginSlideList.json',
-//	method: 'GET',
-//	success: function (response) {
-//	  Ext.Viewport.unmask();
-//	  var responseJason = JSON.parse(response.responseText);
-//	  console.log('-------Response---------');
-//	  console.log(responseJason);
-//	  console.log('----------------');
-      var slideNavListStore = Ext.getStore('slideNavListStore');
-      slideNavListStore.removeAll();
       slideNavListStore.setData(data);
-//	  console.log('-------Store---------');
-//	  console.log(slideNavListStore);
-//	  console.log('----------------');
-      me.getMainToolbar().setTitle('Home');
+      console.log(slideNavListStore.data);
+      me.getMainToolbar().setTitle('Rater Home');
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });
-//	},
-//	failure: function (response) {
-//	  console.log(response);
-//	  Ext.Viewport.unmask();
-//	  Ext.Msg.alert('Failure', "Please check your internet connection.");
-//	}
-//      });
+      me.getSlideNavList().select(1);
     }
   }
 });

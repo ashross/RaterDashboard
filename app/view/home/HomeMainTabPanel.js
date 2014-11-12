@@ -1,8 +1,7 @@
 Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
   extend: 'Ext.TabPanel',
   xtype: 'homeMainTabPanel',
-  requires:[
-    'RaterDashboard.view.video.VideoCardGroup',
+  requires: [
     'RaterDashboard.view.home.HomeCardGroup'
   ],
   config: {
@@ -12,7 +11,7 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
     },
     items: [
       {
-	xtype:'homeCardGroup',
+	xtype: 'homeCardGroup',
 	title: 'Home',
 	iconCls: 'home'
       },
@@ -27,21 +26,22 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
 	html: 'Twitter section'
       },
       {
-	title: 'Contact us',
-	iconCls: 'user',
-	html: 'Contact us Screen'
-      },
-      {
 	xtype: 'moreCardGroup',
 	title: 'More Info',
 	iconCls: 'infoTabIcon'
       },
       {
-//	xtype: 'logout',
-	title: 'Logout',
-	iconCls: 'logoutIcon',
-	html: 'Logout Screen'
+	title: 'Contact us',
+	iconCls: 'contactusTabIcon',
+	html: 'Contact us Screen'
       }
+//      ,
+//      {
+//	xtype: 'logout',
+//	title: 'Logout',
+//	iconCls: 'logoutTabIcon',
+//	html: 'Logout Screen'
+//      }
     ]
   }
 });

@@ -4,7 +4,8 @@ Ext.define("RaterDashboard.controller.APCentralController", {
     refs: {
       // News view
       newsList: 'mainCardGroup #newsListId',
-      APCentralList: 'mainCardGroup #APCentralListId'
+      APCentralList: 'mainCardGroup #APCentralListId',
+      
     },
     control: {
       newsList: {
@@ -58,8 +59,8 @@ Ext.define("RaterDashboard.controller.APCentralController", {
 //	console.log('-------Response---------');
 //	console.log(responseJason);
 //	console.log('----------------');
-	var slideNavListStore = Ext.getStore('slideNavListStore');
-	slideNavListStore.setData(data);
+    var slideNavListStore = Ext.getStore('slideNavListStore');
+    slideNavListStore.setData(data);
 //	console.log('-------Store---------');
 //	console.log(slideNavListStore);
 //	console.log('----------------');

@@ -2,20 +2,23 @@ Ext.define("RaterDashboard.view.home.TeacherCommunity", {
   extend: 'Ext.Container',
   xtype: 'teacherCommunity',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',
-	padding: 10,
+	cls:'pageHeadingCls',
 	html: 'About the AP Teacher Community'
       },
       {
 	xtype: 'dataview',
 	store: null,
 	scrollable: null,
-	cls: 'newsListCls',
+	cls: 'contentListCls',
 	itemTpl: [
-		  '<div class="">{content}</div>'
+	  '<div class="">{content}</div>'
 	],
 	data: [
 	  {content: 'The AP Teacher Community is where AP teachers discuss teaching strategies, share resources, and connect with each other. We currently support all AP courses and AP Coordinators through 30 communities.'},
@@ -26,7 +29,7 @@ Ext.define("RaterDashboard.view.home.TeacherCommunity", {
     ]
   }
 });
-function commuityFn(){
+function commuityFn() {
   var url = 'https://apcommunity.collegeboard.org/';
   if (Ext.os.is.iOS) {
     console.log('iOS');

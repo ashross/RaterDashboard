@@ -13,6 +13,7 @@ Ext.application({
     'Ext.device.Geolocation',
     'Ext.Map',
     'Ext.Video',
+    'Ext.carousel.Carousel',
     'RaterDashboard.Utilities'
   ],
   views: [
@@ -23,7 +24,6 @@ Ext.application({
   controllers: [
     'LoginController',
     'SlideNavController',
-    'HomeController',
     'MoreController',
     'APCentralController',
     'RaterModuleController',

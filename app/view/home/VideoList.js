@@ -1,17 +1,11 @@
-Ext.define('RaterDashboard.view.video.VideoList', {
+Ext.define('RaterDashboard.view.home.VideoList', {
   extend: 'Ext.Container',
   xtype: 'videoList',
   config: {
-//    store: 'videoStore',
-//    itemId: 'videoListId',
-//    cls:'videoListCls',
-//    itemTpl: [
-//      '<div align="center">' +
-//	      '<div class="title">{title}</div>' +
-//	      '<img src="{poster}" />' +
-//	      '</div>'
-//    ],
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       // first
       {

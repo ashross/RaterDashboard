@@ -6,7 +6,8 @@
   'icon/icomoon.svg', svg
   ));
 
-  .loginIcon, .scheduleIcon, .speakerIcon, .sponsorIcon, .mapIcon, .infoIcon, .faceBookIcon, .twitterIcon{
+  .loginIcon, .scheduleIcon, .infoIcon, .faceBookIcon, .twitterIcon, .logoutIcon{
+    //.speakerIcon, .sponsorIcon, .mapIcon,
     font-family: 'icomoon';
     span{
       font-size: 1em;
@@ -14,54 +15,68 @@
       top: -8px;
     }
   }
-  
-  .loginIcon:before, .scheduleIcon:before, .speakerIcon:before, .sponsorIcon:before, .mapIcon:before, .infoIcon:before, 
-  .faceBookIcon:before, .twitterIcon:before{
+
+  .loginIcon:before, .scheduleIcon:before, .infoIcon:before, 
+    .faceBookIcon:before, .twitterIcon:before, .loginIcon:before, .logoutIcon:before{
+    //.speakerIcon:before, .sponsorIcon:before, .mapIcon:before,
     padding-right: 10px;
     color:#fff;
     font-size: 1.6em;
   }
   .loginIcon:before{
-    content: "\e605";
+    content: "\e60b";
   }
   .scheduleIcon:before{
-    content: "\e603";
+    content: "\e605";
   }
-  .speakerIcon:before{
-    content: "\e600";
-  }
-  .sponsorIcon:before{
+  /*  .speakerIcon:before{
+      content: "\e600";
+    }
+    .sponsorIcon:before{
+      content: "\e609";
+    }
+    .mapIcon:before{
+      content: "\e601";
+    }*/
+  .infoIcon:before{
     content: "\e609";
   }
-  .mapIcon:before{
-    content: "\e601";
-  }
-  .infoIcon:before{
-    content: "\e607";
-  }
   .faceBookIcon:before{
-    content: "\e60a";
+    content: "\e60d";
   }
   .twitterIcon:before{
-    content: "\e60b";
+    content: "\e60e";
   }
   .raterNavListCls{
     color:#fff;
     font-size: 1em;
   }
-  
-  // Tab icons
-  
-  
-  .faceBookTabIcon:before{
-    content: "\e60a";
-  }
-  .twitterTabIcon:before{
+  .loginIcon:before{
     content: "\e60b";
   }
-  .infoTabIcon:before{
-    content: "\e607";
+  .logoutIcon:before{
+    content: "\e60c";
   }
- 
-  
+
+  // Tab icons
+
+
+  .faceBookTabIcon:before{
+    content: "\e60d";
+  }
+  .twitterTabIcon:before{
+    content: "\e60e";
+  }
+  .infoTabIcon:before{
+    content: "\e609";
+  }
+  .loginTabIcon:before{
+    content: "\e60b";
+  }
+  .logoutTabIcon:before{
+    content: "\e60c";
+  }
+  .contactusTabIcon:before{
+    content: "\e601";
+  }
 }

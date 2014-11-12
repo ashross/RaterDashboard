@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.home.PrefessionalDevelopment", {
   extend: 'Ext.Container',
   xtype: 'prefessionalDevelopment',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

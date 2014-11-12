@@ -35,14 +35,15 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
       },
       {
 	title: 'Contact us',
-	iconCls: 'user',
+	iconCls: 'contactusTabIcon',
 	html: 'Contact us Screen'
-      },
-      {
-	xtype: 'login',
-	title: 'Login',
-	iconCls: 'info'
       }
+//      ,
+//      {
+//	xtype: 'login',
+//	title: 'Login',
+//	iconCls: 'loginTabIcon'
+//      }
     ]
   }
 });

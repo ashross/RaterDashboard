@@ -83,7 +83,7 @@
   //--------------------------------AP Central List -----------------------------------------------------
 
   .APCentralListCls{
-    border-bottom: 3px double #1d5a8a;
+    border-bottom: 1px solid #649b02;
     padding-bottom: 10px;
     .x-dataview-item{
       padding: 10px;
@@ -108,5 +108,30 @@
 	border-top-color: transparent !important;
       }
     }  
+  }
+  // --------------------------- Paragraph list style------------------------------------------------
+
+  .contentListCls{
+    padding: 10px;
+    border: 1px solid #333;
+    margin: 10px 5px 0px;
+    color:#000;
+    box-shadow:1px 3px 5px #333;
+    background: #fff;
+    .x-dataview-item{
+      padding: 10px 0;
+      .headingCls{
+	color:#1d5a8a;
+	font-size: 16px;
+	font-weight: bold;
+      }
+      .contentCls{
+	font-size: 13px;
+      }
+      &.x-item-pressed, &.x-item-pressing{
+	background: #fff !important;
+	border-top-color: transparent !important;
+      }
+    }
   }
 }

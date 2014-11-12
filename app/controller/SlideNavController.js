@@ -47,80 +47,79 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 	type: 'slide',
 	direction: 'left'
       });
-    } else if (record.data.name === 'Maps') {
-      me.getMainToolbar().setTitle(record.data.name);
-      me.getMainCardGroup().animateActiveItem('maps', {
-	type: 'slide',
-	direction: 'left'
-      });
-    } else if (record.data.name === 'More Info') {
-      me.getMainToolbar().setTitle(record.data.name);
-      me.getMainCardGroup().animateActiveItem('moreCardGroup', {
-	type: 'slide',
-	direction: 'left'
-      });
-    } else if (record.data.name === 'Raters') {
-      GLOB.f.loadMask();
-      Ext.Ajax.request({
-	url: 'resources/data/raterData.json',
-	method: 'GET',
-	success: function (response) {
-	  Ext.Viewport.unmask();
-	  var responseJason = JSON.parse(response.responseText);
-	  console.log(responseJason);
-	  var speakers = Ext.getStore('raterStore');
-	  speakers.setData(responseJason);
-	  me.getMainToolbar().setTitle(record.data.name);
-	  me.getMainCardGroup().animateActiveItem('rater', {
-	    type: 'slide',
-	    direction: 'left'
-	  });
-	},
-	failure: function (response) {
-	  console.log(response);
-	  Ext.Viewport.unmask();
-	  Ext.Msg.alert('Failure', "Please check your internet connection.");
-	}
-      });
-
-    } else if (record.data.name === 'Sponsors') {
-      me.getMainToolbar().setTitle(record.data.name);
-      me.getMainCardGroup().animateActiveItem('sponsor', {
-	type: 'slide',
-	direction: 'left'
-      });
-    } else if (record.data.name === 'Logout to RaterApp') {
+    }
+//    else if (record.data.name === 'Maps') {
+//      me.getMainToolbar().setTitle(record.data.name);
+//      me.getMainCardGroup().animateActiveItem('maps', {
+//	type: 'slide',
+//	direction: 'left'
+//      });
+//    } 
+//    else if (record.data.name === 'More Info') {
+//      me.getMainToolbar().setTitle(record.data.name);
+//      me.getMainCardGroup().animateActiveItem('moreCardGroup', {
+//	type: 'slide',
+//	direction: 'left'
+//      });
+//    } 
+//    else if (record.data.name === 'Raters') {
+//      GLOB.f.loadMask();
+//      Ext.Ajax.request({
+//	url: 'resources/data/raterData.json',
+//	method: 'GET',
+//	success: function (response) {
+//	  Ext.Viewport.unmask();
+//	  var responseJason = JSON.parse(response.responseText);
+//	  console.log(responseJason);
+//	  var speakers = Ext.getStore('raterStore');
+//	  speakers.setData(responseJason);
+//	  me.getMainToolbar().setTitle(record.data.name);
+//	  me.getMainCardGroup().animateActiveItem('rater', {
+//	    type: 'slide',
+//	    direction: 'left'
+//	  });
+//	},
+//	failure: function (response) {
+//	  console.log(response);
+//	  Ext.Viewport.unmask();
+//	  Ext.Msg.alert('Failure', "Please check your internet connection.");
+//	}
+//      });
+//
+//    }
+//    else if (record.data.name === 'Sponsors') {
+//      me.getMainToolbar().setTitle(record.data.name);
+//      me.getMainCardGroup().animateActiveItem('sponsor', {
+//	type: 'slide',
+//	direction: 'left'
+//      });
+//    } 
+    else if (record.data.name === 'Logout to RaterApp') {
       Ext.Msg.confirm('Alert', 'Are you sure you want to Logout?', function (id, value) {
 	if (id === 'yes') {
-//	  GLOB.f.loadMask();
-//	  Ext.Ajax.request({
-//	    url: 'resources/data/beforeLoginSlideList.json',
-//	    method: 'GET',
-//	    success: function (response) {
-//	      Ext.Viewport.unmask();
-//	      var responseJason = JSON.parse(response.responseText);
-//	      console.log(responseJason);
+	  var slideNavListStore = Ext.getStore('slideNavListStore');
+	  slideNavListStore.removeAll();
 	  var data = [
 	    {
 	      "name": "Login to RaterApp",
 	      "iconCls": "loginIcon",
 	      "type": ""
 	    },
-	    {
-	      "name": "Raters",
-	      "iconCls": "speakerIcon",
-	      "type": "Rater"
-	    },
-	    {
-	      "name": "Sponsors",
-	      "iconCls": "sponsorIcon",
-	      "type": "Rater"
-	    },
-	    {
-	      "name": "More Info",
-	      "iconCls": "infoIcon",
-	      "type": "Rater"
-	    },
+//	    {
+//	      "name": "Raters",
+//	      "iconCls": "speakerIcon",
+//	      "type": "Rater"
+//	    },
+//	    {
+//	      "name": "Sponsors",
+//	      "iconCls": "sponsorIcon",
+//	      "type": "Rater"
+//	    },
+//	    {
+//	      "name": "More Info",
+//	      "iconCls": "infoIcon",
+//	      "type": "Rater"
+//	    },
 	    {
 	      "name": "Facebook",
 	      "iconCls": "faceBookIcon",
@@ -132,19 +131,13 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 	      "type": "Social"
 	    }
 	  ];
-	  var slideNavListStore = Ext.getStore('slideNavListStore');
-	  slideNavListStore.removeAll();
+
 	  slideNavListStore.setData(data);
 	  me.getMainToolbar().setTitle('AP Central');
 	  me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
 	    type: 'slide',
 	    direction: 'right'
 	  });
-//	    },
-//	    failure: function (response) {
-//	      Ext.Viewport.unmask();
-//	    }
-//	  });
 	}
       }, this);
       return false;

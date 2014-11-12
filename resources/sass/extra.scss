@@ -49,12 +49,22 @@
 
   .font13{font-size: 13px;}
   .x-layout-card-item{
-    background:rgba(100, 155, 2, 0.1);
+    background:#fff;
+    /*background:rgba(100, 155, 2, 0.1);*/
   }
   .x-dataview-inner.x-scroll-scroller{
     padding:0px;
   }
   .doubleTopBordCls{
-    border-top: 3px double #1d5a8a;
+    border-top: 1px solid #649b02;
+  }
+  .x-form-fieldset{
+
+    .x-form-fieldset-inner{
+      border: 1px solid #000;
+    }
+    .emailCls{
+      border-bottom: 1px solid #000;
+    }
   }
 }

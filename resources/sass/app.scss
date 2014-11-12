@@ -10,6 +10,7 @@
 @import 'apCentral.scss';
 @import 'schedule.scss';
 @import 'login.scss';
+@import 'raterHome.scss';
 
 
 @include toolbar;
@@ -21,5 +22,6 @@
 @include apCentral;
 @include schedule;
 @include login;
+@include raterHome;
 
-@include icon('user');
+/*@include icon('user');*/

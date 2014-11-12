@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.home.PreAP", {
   extend: 'Ext.Container',
   xtype: 'preAP',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

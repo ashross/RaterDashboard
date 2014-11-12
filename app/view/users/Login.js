@@ -5,7 +5,7 @@ Ext.define('RaterDashboard.view.users.Login', {
     layout: {
       type: 'vbox',
       pack: 'center',
-      align:'center'
+      align: 'center'
     },
     cls: 'loginCls',
     items: [
@@ -20,6 +20,7 @@ Ext.define('RaterDashboard.view.users.Login', {
 	  {
 	    xtype: 'emailfield',
 	    placeHolder: 'email@example.com',
+	    cls: 'emailCls',
 	    value: 'test@gmail.com',
 	    name: 'email'
 	  },
@@ -32,7 +33,7 @@ Ext.define('RaterDashboard.view.users.Login', {
 	]
       },
       {
-	xtype:'container',
+	xtype: 'container',
 	layout: 'hbox',
 	items: [
 	  {
