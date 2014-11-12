@@ -1,0 +1,73 @@
+@mixin alertBox{
+  .x-msgbox{
+    background: #fff !important;
+    border:0.15em solid #fff;
+    padding: 6px 0 !important;
+
+    .x-toolbar.x-toolbar-dark{
+      background:transparent !important;
+      border:transparent !important;
+
+      .x-title{
+	color:#000000 !important;
+	text-shadow: none !important;
+      }
+    }
+
+    .x-msgbox-text{
+      color:#000000 !important;
+      text-shadow: none !important;
+      padding: 10px;
+    }
+
+    .x-dock-body{
+      background:transparent !important;
+    }
+
+
+    .x-msgbox-buttons .x-button {
+      width: 49%;
+      background: #fff !important;
+      border: none !important; 
+      color: #000 !important;
+      border-radius: 0 !important;
+      margin: 0;
+
+      .x-button-label{
+	font-size: 1em !important;
+	color:#005c9d;
+      }
+    }
+
+    .x-msgbox-buttons .x-button:first-child:last-child {
+      width: 99%;
+      border: none !important; 
+    }
+    .x-msgbox-buttons .x-button:last-child {
+      border-left:1px solid #333 !important; 
+    }
+
+    .x-toolbar.x-docked-bottom {
+      border-top: 1px solid #ccc !important;
+      margin-top: 15px !important;
+
+    }
+    .x-msgbox-dark.x-msgbox{
+      .x-toolbar.x-msgbox-buttons{
+	background:none !important;
+      }
+    }
+/*    .dialog-title{
+      text-align: center;
+      font-size: 20px;
+      padding:15px 10px;
+      color: #3c668a;
+      font-weight: lighter;
+
+      div.firstTitleDiv, label.firstTitleDiv{
+	font-family: 'HelveticaNeueLTStd23UltraLightExtended';
+	color:#6097C5 !important;
+      }
+    }*/
+  }
+}
