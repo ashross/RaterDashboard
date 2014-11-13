@@ -103,6 +103,9 @@
         },
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "org.ets.rater.dashboard"
+        },
+        "org.apache.cordova.plugin.phonenavigator": {
+            "PACKAGE_NAME": "org.ets.rater.dashboard"
         }
     },
     "dependent_plugins": {}

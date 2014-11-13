@@ -617,6 +617,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.ux.ApplicationMenu": [],
   "Ext.ux.ContextMenu": [],
   "Ext.ux.MenuButton": [],
+  "Ext.ux.SwipeTabs": [],
   "Ext.ux.TabMenuButton": [],
   "Ext.ux.device.Analytics": [],
   "Ext.ux.device.Twitter": [],
@@ -661,7 +662,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.Main": [],
   "RaterDashboard.view.MainCardGroup": [],
   "RaterDashboard.view.NavigationList": [],
-  "RaterDashboard.view.facebook.FacebookCardGroup": [],
   "RaterDashboard.view.facebook.FacebookLogin": [],
   "RaterDashboard.view.home.APReader": [],
   "RaterDashboard.view.home.CoursesAndExams": [],
@@ -680,6 +680,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.rater.Rater": [],
   "RaterDashboard.view.schedule.Schedule": [],
   "RaterDashboard.view.sponsor.Sponsor": [],
+  "RaterDashboard.view.twitter.TwitterLogin": [],
   "RaterDashboard.view.users.Login": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1370,6 +1371,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.ux.ApplicationMenu": [],
   "Ext.ux.ContextMenu": [],
   "Ext.ux.MenuButton": [],
+  "Ext.ux.SwipeTabs": [
+    "plugin.swipetabs"
+  ],
   "Ext.ux.TabMenuButton": [],
   "Ext.ux.device.Analytics": [],
   "Ext.ux.device.Twitter": [],
@@ -1430,9 +1434,6 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.view.NavigationList": [
     "widget.navigationList"
   ],
-  "RaterDashboard.view.facebook.FacebookCardGroup": [
-    "widget.facebookCardGroup"
-  ],
   "RaterDashboard.view.facebook.FacebookLogin": [
     "widget.facebookLogin"
   ],
@@ -1486,6 +1487,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "RaterDashboard.view.sponsor.Sponsor": [
     "widget.sponsor"
+  ],
+  "RaterDashboard.view.twitter.TwitterLogin": [
+    "widget.twitterLogin"
   ],
   "RaterDashboard.view.users.Login": [
     "widget.login"

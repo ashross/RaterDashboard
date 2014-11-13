@@ -11,12 +11,12 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
     defaults: {
       styleHtmlContent: true
     },
-    plugins: 'swipetabs',
-    allowDirections:'left',
+    //plugins: 'swipetabs',
+    //allowDirections:'left',
     items: [
       {
 	xtype: 'homeCardGroup',
-	allowSwipe:false,
+	//allowSwipe:false,
 	title: 'Home',
 	iconCls: 'home'
       },
