@@ -14,7 +14,8 @@ Ext.application({
     'Ext.Map',
     'Ext.Video',
     'Ext.carousel.Carousel',
-    'RaterDashboard.Utilities'
+    'RaterDashboard.Utilities',
+    'Ext.ux.SwipeTabs'
   ],
   views: [
     'Main',

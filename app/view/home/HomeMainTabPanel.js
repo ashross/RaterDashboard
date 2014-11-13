@@ -1,6 +1,5 @@
 Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
   extend: 'Ext.TabPanel',
-  extend: 'Ext.carousel.Carousel',
   xtype: 'homeMainTabPanel',
   requires: [
     'RaterDashboard.view.home.HomeCardGroup',
@@ -12,9 +11,12 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
     defaults: {
       styleHtmlContent: true
     },
+    plugins: 'swipetabs',
+    allowDirections:'left',
     items: [
       {
 	xtype: 'homeCardGroup',
+	allowSwipe:false,
 	title: 'Home',
 	iconCls: 'home'
       },
