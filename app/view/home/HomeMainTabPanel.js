@@ -1,5 +1,6 @@
 Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
   extend: 'Ext.TabPanel',
+  extend: 'Ext.carousel.Carousel',
   xtype: 'homeMainTabPanel',
   requires: [
     'RaterDashboard.view.home.HomeCardGroup',

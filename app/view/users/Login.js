@@ -11,7 +11,7 @@ Ext.define('RaterDashboard.view.users.Login', {
     items: [
       {
 	xtype: 'panel',
-	html: '<div align="center"><img src="resources/images/logo.png" width="70%" /></div>'
+	html: '<div align="center"><img src="resources/images/logo.png" width="40%" /></div>'
       },
       {
 	xtype: 'fieldset',
@@ -47,7 +47,7 @@ Ext.define('RaterDashboard.view.users.Login', {
 	  {
 	    xtype: 'button',
 	    text: 'Forgot Password',
-	    cls: 'transparentBtnCls ml10 font13',
+	    cls: 'buttonCls ml10',
 	    name: 'moveToForgetPasswordBtn'
 	  }
 	]
@@ -55,8 +55,8 @@ Ext.define('RaterDashboard.view.users.Login', {
       {
 	xtype: 'button',
 	text: 'Create an Accoount',
-	margin: 10,
-	cls: 'transparentBtnCls font13',
+	margin: '10 35%',
+	cls: 'buttonCls',
 	docked: 'bottom'
       }
     ]
