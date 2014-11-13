@@ -34,14 +34,6 @@ Ext.define('RaterDashboard.view.logout.Logout', {
 	},
 	margin:10,
 	items: [
-//	  {
-//	    xtype: 'button',
-//	    text: 'No',
-//	    width: 90,
-//	    margin: '0 0 0 7',
-//	    itemId: 'nologoutBtnId',
-//	    cls: 'buttonCls'
-//	  },
 	  {
 	    xtype: 'button',
 	    text: 'Yes',

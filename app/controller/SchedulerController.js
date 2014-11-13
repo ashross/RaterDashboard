@@ -5,6 +5,7 @@ Ext.define("RaterDashboard.controller.SchedulerController", {
       mainCardGroup: 'mainCardGroup',
       ScheduleForm: 'schedule',
       checkinBtn: 'schedule #checkInBtnId',
+      provideFeedbackBtn: 'schedule #provideFeedbackBtnId',
       slideNavList: 'main #slideNavListId',
       // main toolbar
       mainToolbar: 'mainCardGroup #mainToolbarId',
@@ -14,6 +15,9 @@ Ext.define("RaterDashboard.controller.SchedulerController", {
     control: {
       checkinBtn: {
 	tap: 'checkinBtnTapped'
+      },
+      provideFeedbackBtn: {
+	tap: 'provideFeedbackBtnTapped'
       }
     }
   },
@@ -21,17 +25,13 @@ Ext.define("RaterDashboard.controller.SchedulerController", {
     var me = this;
     console.log('tapped');
     me.createCalendar();
-
   },
   success: function (Obj) {
     var eventId = Obj;
-
     var me = this;
     alert('in success');
     console.log('success ' + obj);
-
     return true;
-
   },
   /**
    * @method error
@@ -53,10 +53,65 @@ Ext.define("RaterDashboard.controller.SchedulerController", {
       "location": 'Madrid'
     };
     window.plugins.AndroidCalendar.addCalendarEvent(EventObj, me.success, me.error);
+  },
+  provideFeedbackBtnTapped: function () {
+    var feedbackPopup = Ext.create('Ext.Panel', {
+      width: '51%',
+//      height: 208,
+      centered: true,
+      hideOnMaskTap: true,
+      modal: true,
+      cls: 'feedbackPopupCls',
+//    cls: 'popupCls getNewPasswordCls',
+//      hidden: true,
+//      modal: true,
+//      hideOnMaskTap: true,
+      items: [
+	{
+	  xtype: 'fieldset',
+	  title: 'Your Feedback',
+	  labelAlign: 'top',
+	  items: [
+	    {
+	      xtype: 'textareafield',
+	      maxRows: 4,
+	      name: 'bio'
+	    }
+	  ]
+	},
+	{
+	  xtype: 'container',
+	  margin: 5,
+	  layout: {
+	    type: 'hbox',
+	    pack: 'center'
+	  },
+	  items: [
+	    {
+	      xtype: 'button',
+	      cls: 'scheduleBtnCls',
+	      text: 'Cancel',
+	      handler: function () {
+		Ext.Viewport.remove(feedbackPopup);
+	      }
+	    },
+	    {
+	      xtype: 'button',
+	      cls: 'scheduleBtnCls ml10',
+	      text: 'Submit',
+	      handler: function () {
+		Ext.Viewport.remove(feedbackPopup);
+		setTimeout(function () {
+		  Ext.Msg.alert('Success', 'Thanks for your feedback');
+		}, 500);
 
+	      }
+	    }
+	  ]
+	}
+      ]
+    });
+    Ext.Viewport.add(feedbackPopup);
+    feedbackPopup.show();
   }
 });
-function validateEmail(checkEmail) {
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(checkEmail);
-}

@@ -36,8 +36,22 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
 	  {
 	    xtype: 'button',
 	    cls: 'scheduleBtnCls',
+	    margin: '0 10 0 0',
 	    itemId: 'checkInBtnId',
-	    text: 'Check in'
+	    text: 'Schedule 1'
+	  },
+	  {
+	    xtype: 'button',
+	    cls: 'scheduleBtnCls',
+	    margin: '0 10 0 0',
+//	    itemId: 'checkInBtnId',
+	    text: 'Schedule 2'
+	  },
+	  {
+	    xtype: 'button',
+	    cls: 'scheduleBtnCls',
+//	    itemId: 'checkInBtnId',
+	    text: 'Schedule 3'
 	  }
 	]
       },
@@ -56,6 +70,7 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
 	margin: 10,
 	cls: 'scheduleBtnCls',
 	width: '25%',
+	itemId:'provideFeedbackBtnId',
 	text: 'Provide Feedback'
       },
       {

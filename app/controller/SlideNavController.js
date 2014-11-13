@@ -98,47 +98,11 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 //      });
 //    } 
     else if (record.data.name === 'Logout to RaterApp') {
-	var data = [
-	  {
-	    "name": "Login to RaterApp",
-	    "iconCls": "loginIcon",
-	    "type": ""
-	  },
-//	    {
-//	      "name": "Raters",
-//	      "iconCls": "speakerIcon",
-//	      "type": "Rater"
-//	    },
-//	    {
-//	      "name": "Sponsors",
-//	      "iconCls": "sponsorIcon",
-//	      "type": "Rater"
-//	    },
-//	    {
-//	      "name": "More Info",
-//	      "iconCls": "infoIcon",
-//	      "type": "Rater"
-//	    },
-	  {
-	    "name": "Facebook",
-	    "iconCls": "faceBookIcon",
-	    "type": "Social"
-	  },
-	  {
-	    "name": "Twitter",
-	    "iconCls": "twitterIcon",
-	    "type": "Social"
-	  }
-	];
-//	  var slideNavListStore = Ext.getStore('slideNavListStore');
-//	  slideNavListStore.removeAll();
-//	  slideNavListStore.setData(data);
-//	  me.getMainToolbar().setTitle('AP Central');
-//	  me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
-//	    type: 'slide',
-//	    direction: 'right'
-//	  });
-//	  me.getApCentralMainTabPanel().setActiveItem('apCentral');
+      me.getMainToolbar().setTitle(record.data.name);
+      me.getHomeMainTabPanel().animateActiveItem('logout', {
+	type: 'slide',
+	direction: 'left'
+      });
     } else if (record.data.name === 'Facebook') {
       var slideNavListStore = Ext.getStore('slideNavListStore');
       me.getMainToolbar().setTitle('Facebook Login');
@@ -169,7 +133,6 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       }
     } else if (record.data.name === 'Videos') {
       me.getMainToolbar().setTitle(record.data.name);
-      
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
@@ -226,24 +189,11 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(5);
     } else if (record.data.name === 'Schedule') {
-      
       me.getMainToolbar().setTitle(record.data.name);
-      
       me.getHomeMainTabPanel().animateActiveItem('schedule', {
-	  type: 'slide',
-	  direction: 'left'
-	});
-//      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
-//	type: 'slide',
-//	direction: 'left'
-//      });
-      me.getSlideNavList().select(8);
-      
-      
-//      me.getMainCardGroup().animateActiveItem('schedule', {
-//	type: 'slide',
-//	direction: 'left'
-//      });
+	type: 'slide',
+	direction: 'left'
+      });
     }
   }
 });

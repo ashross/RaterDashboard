@@ -2,21 +2,9 @@ Ext.define("RaterDashboard.controller.HomeMainTabController", {
   extend: 'Ext.app.Controller',
   config: {
     refs: {
-      videoCardGroup: 'videoCardGroup',
-      // Video List view
-      videoList: 'mainCardGroup #videoListId',
-      videoLinkSrc: 'mainCardGroup #videoLinkSrcId',
       // main toolbar
       mainToolbar: 'mainCardGroup #mainToolbarId',
-      navBtn: 'mainCardGroup #navBtnId',
-      backButton: 'mainCardGroup #backButtonId',
-      // Rater home view list
       homeCardGroup: 'homeCardGroup',
-      homeFeaturedList: 'homeCardGroup #homeFeaturedListId',
-      homeExploreList: 'homeCardGroup #homeExploreListId',
-      // homeCarouselViewId
-      homeCarouselView: '#homeCarouselViewId',
-      // slide Nav List
       slideNavList: 'main #slideNavListId'
     },
     control: {
@@ -30,12 +18,7 @@ Ext.define("RaterDashboard.controller.HomeMainTabController", {
 
     if (cardID === 'homeCardGroupId') {
 
-
-//me.getMainCardGroup().animateActiveItem('homeMainTabPanel');
-//me.getHomeMainTabPanel().setActiveItem(0);
-
       me.getHomeCardGroup().setActiveItem(0);
-
       me.getMainToolbar().setTitle('Rater Home');
       me.getSlideNavList().select(5);
 
