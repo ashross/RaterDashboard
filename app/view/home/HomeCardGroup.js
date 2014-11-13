@@ -18,38 +18,38 @@ Ext.define("RaterDashboard.view.home.HomeCardGroup", {
     items: [
       {
 	xtype: 'raterHome',
-	cls: 'blockStyleLayoutCls 1111111111111111111111',
-	itemId:'raterHomeId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'raterHomeId'
       },
       {
 	xtype: 'coursesAndExams',
-	cls: 'blockStyleLayoutCls 2222222222222222222222',
-	itemId:'coursesAndExamsId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'coursesAndExamsId'
       },
       {
 	xtype: 'preAP',
-	cls: 'blockStyleLayoutCls 333333333333333333333333',
-	itemId:'preAPId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'preAPId'
       },
       {
 	xtype: 'teacherCommunity',
-	cls: 'blockStyleLayoutCls 44444444444444444444444',
-	itemId:'teacherCommunityId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'teacherCommunityId'
       },
       {
 	xtype: 'prefessionalDevelopment',
-	cls: 'blockStyleLayoutCls 55555555555555555555555',
-	itemId:'prefessionalDevelopmentId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'prefessionalDevelopmentId'
       },
       {
 	xtype: 'apReader',
-	cls: 'blockStyleLayoutCls 666666666666666666666666',
-	itemId:'apReaderId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'apReaderId'
       },
       {
 	xtype: 'videoList',
-	cls: 'blockStyleLayoutCls 7777777777777777777777777',
-	itemId:'videoListId'
+	cls: 'blockStyleLayoutCls',
+	itemId: 'videoListId'
       }
     ],
     listeners: [

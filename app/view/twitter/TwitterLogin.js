@@ -7,6 +7,10 @@ Ext.define('RaterDashboard.view.twitter.TwitterLogin', {
       pack: 'center',
       align: 'center'
     },
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'button',

@@ -13,6 +13,7 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
     defaults: {
       styleHtmlContent: true
     },
+    plugins: 'swipetabs',
     items: [
       {
 	xtype: 'apCentral',

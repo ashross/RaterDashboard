@@ -2,6 +2,10 @@ Ext.define('RaterDashboard.view.users.Login', {
   extend: 'Ext.form.Panel',
   xtype: 'login',
   config: {
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     layout: {
       type: 'vbox',
       pack: 'center',
@@ -40,7 +44,7 @@ Ext.define('RaterDashboard.view.users.Login', {
 	    xtype: 'button',
 	    text: 'Login',
 	    width: 90,
-	    margin:'0 0 0 7',
+	    margin: '0 0 0 7',
 	    itemId: 'loginBtnId',
 	    cls: 'buttonCls'
 	  },

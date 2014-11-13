@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.schedule.Schedule", {
   extend: 'Ext.Container',
   xtype: 'schedule',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

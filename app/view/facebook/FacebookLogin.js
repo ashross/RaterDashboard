@@ -7,6 +7,10 @@ Ext.define('RaterDashboard.view.facebook.FacebookLogin', {
       pack: 'center',
       align: 'center'
     },
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

@@ -9,7 +9,8 @@ Ext.define("RaterDashboard.controller.LoginController", {
       // main toolbar
       mainToolbar: 'mainCardGroup #mainToolbarId',
       navBtn: 'mainCardGroup #navBtnId',
-      backButton: 'mainCardGroup #backButtonId'
+      backButton: 'mainCardGroup #backButtonId',
+      homeMainTabPanel: 'homeMainTabPanel'
     },
     control: {
       loginBtn: {
@@ -112,7 +113,6 @@ Ext.define("RaterDashboard.controller.LoginController", {
 	}
       ];
       slideNavListStore.setData(data);
-      console.log(slideNavListStore.data);
       me.getMainToolbar().setTitle('Rater Home');
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',

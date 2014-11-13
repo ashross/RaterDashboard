@@ -90,7 +90,7 @@
       width:32%;
       color:#000;
       border: 1px solid #333;
-      /*box-shadow: 1px 3px 5px #333;*/
+      border-radius: 10px;
       background: #fff;
       display: inline-block !important;
       .headingCls{
@@ -121,11 +121,11 @@
 
   .contentListCls{
     padding: 10px;
-/*    border: 1px solid #333;
-    margin: 10px 5px 0px;
-    color:#000;
-    box-shadow:1px 3px 5px #333;
-    background: #fff;*/
+    /*    border: 1px solid #333;
+	margin: 10px 5px 0px;
+	color:#000;
+	box-shadow:1px 3px 5px #333;
+	background: #fff;*/
     .x-dataview-item{
       padding: 10px 0;
       .headingCls{

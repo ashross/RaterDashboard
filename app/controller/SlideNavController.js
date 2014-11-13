@@ -98,16 +98,12 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 //      });
 //    } 
     else if (record.data.name === 'Logout to RaterApp') {
-      Ext.Msg.confirm('Alert', 'Are you sure you want to Logout?', function (id, value) {
-	if (id === 'yes') {
-	  var slideNavListStore = Ext.getStore('slideNavListStore');
-	  slideNavListStore.removeAll();
-	  var data = [
-	    {
-	      "name": "Login to RaterApp",
-	      "iconCls": "loginIcon",
-	      "type": ""
-	    },
+	var data = [
+	  {
+	    "name": "Login to RaterApp",
+	    "iconCls": "loginIcon",
+	    "type": ""
+	  },
 //	    {
 //	      "name": "Raters",
 //	      "iconCls": "speakerIcon",
@@ -123,27 +119,26 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
 //	      "iconCls": "infoIcon",
 //	      "type": "Rater"
 //	    },
-	    {
-	      "name": "Facebook",
-	      "iconCls": "faceBookIcon",
-	      "type": "Social"
-	    },
-	    {
-	      "name": "Twitter",
-	      "iconCls": "twitterIcon",
-	      "type": "Social"
-	    }
-	  ];
-
-	  slideNavListStore.setData(data);
-	  me.getMainToolbar().setTitle('AP Central');
-	  me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
-	    type: 'slide',
-	    direction: 'right'
-	  });
-	}
-      }, this);
-      return false;
+	  {
+	    "name": "Facebook",
+	    "iconCls": "faceBookIcon",
+	    "type": "Social"
+	  },
+	  {
+	    "name": "Twitter",
+	    "iconCls": "twitterIcon",
+	    "type": "Social"
+	  }
+	];
+//	  var slideNavListStore = Ext.getStore('slideNavListStore');
+//	  slideNavListStore.removeAll();
+//	  slideNavListStore.setData(data);
+//	  me.getMainToolbar().setTitle('AP Central');
+//	  me.getMainCardGroup().animateActiveItem('apCentralMainTabPanel', {
+//	    type: 'slide',
+//	    direction: 'right'
+//	  });
+//	  me.getApCentralMainTabPanel().setActiveItem('apCentral');
     } else if (record.data.name === 'Facebook') {
       var slideNavListStore = Ext.getStore('slideNavListStore');
       me.getMainToolbar().setTitle('Facebook Login');
@@ -174,13 +169,15 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       }
     } else if (record.data.name === 'Videos') {
       me.getMainToolbar().setTitle(record.data.name);
-      me.getMainCardGroup().animateActiveItem('videoCardGroup', {
+      
+      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
 	direction: 'left'
       });
-//      me.getHomeCardGroup().setActiveItem();
+      me.getHomeMainTabPanel().setActiveItem(0);
+      me.getHomeCardGroup().setActiveItem(6);
     } else if (record.data.name === 'Rater Home') {
-      me.getMainToolbar().setTitle('Home');
+      me.getMainToolbar().setTitle(record.data.name);
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
 	type: 'slide',
@@ -229,12 +226,24 @@ Ext.define("RaterDashboard.controller.SlideNavController", {
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getHomeCardGroup().setActiveItem(5);
     } else if (record.data.name === 'Schedule') {
+      
       me.getMainToolbar().setTitle(record.data.name);
-      me.getMainCardGroup().animateActiveItem('schedule', {
-	type: 'slide',
-	direction: 'left'
-      });
+      
+      me.getHomeMainTabPanel().animateActiveItem('schedule', {
+	  type: 'slide',
+	  direction: 'left'
+	});
+//      me.getMainCardGroup().animateActiveItem('homeMainTabPanel', {
+//	type: 'slide',
+//	direction: 'left'
+//      });
+      me.getSlideNavList().select(8);
+      
+      
+//      me.getMainCardGroup().animateActiveItem('schedule', {
+//	type: 'slide',
+//	direction: 'left'
+//      });
     }
-
   }
 });

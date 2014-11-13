@@ -7,7 +7,7 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 //    'RaterDashboard.view.maps.Maps',
 //    'RaterDashboard.view.more.MoreCardGroup',
 //    'RaterDashboard.view.sponsor.Sponsor',
-    'RaterDashboard.view.schedule.Schedule',
+//    'RaterDashboard.view.schedule.Schedule',
 //    'RaterDashboard.view.rater.Rater',
     'RaterDashboard.view.home.HomeMainTabPanel'
 //    'RaterDashboard.view.facebook.FacebookCardGroup',
@@ -19,7 +19,7 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
       {
 	xtype: 'titlebar',
 	title: 'AP Central',
-	ui:'mainToolbar',
+	ui: 'mainToolbar',
 	itemId: 'mainToolbarId',
 	docked: 'top',
 	items: [
@@ -34,7 +34,7 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 	    hidden: true,
 	    itemId: 'backButtonId',
 	    text: '',
-	    iconCls:'backBtnIcon',
+	    iconCls: 'backBtnIcon',
 	    ui: 'plain'
 	  }
 	]
@@ -51,9 +51,9 @@ Ext.define("RaterDashboard.view.MainCardGroup", {
 //      {
 //	xtype: 'sponsor'
 //      },
-      {
-	xtype: 'schedule'
-      },
+//      {
+//	xtype: 'schedule'
+//      },
 //      {
 //	xtype: 'rater'
 //      },

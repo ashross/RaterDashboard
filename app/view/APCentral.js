@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.APCentral", {
   extend: 'Ext.DataView',
   xtype: 'apCentral',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     items: [
       {
 	xtype: 'panel',

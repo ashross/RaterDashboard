@@ -2,7 +2,10 @@ Ext.define("RaterDashboard.view.more.PrivacyPolicy", {
   extend: 'Ext.Container',
   xtype: 'privacyPolicy',
   config: {
-    scrollable: 'vertical',
+    scrollable: {
+      direction: 'vertical',
+      directionLock: true
+    },
     styleHtmlContent: true,
     items: [
       {

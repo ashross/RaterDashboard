@@ -3,49 +3,69 @@ Ext.define("RaterDashboard.view.home.HomeMainTabPanel", {
   xtype: 'homeMainTabPanel',
   requires: [
     'RaterDashboard.view.home.HomeCardGroup',
+    'RaterDashboard.view.schedule.Schedule',
     'RaterDashboard.view.facebook.FacebookLogin',
-    'RaterDashboard.view.twitter.TwitterLogin'
+    'RaterDashboard.view.twitter.TwitterLogin',
+    'RaterDashboard.view.more.MoreCardGroup',
+    'RaterDashboard.view.logout.Logout'
   ],
   config: {
     tabBarPosition: 'bottom',
     defaults: {
       styleHtmlContent: true
     },
-    plugins: 'swipetabs',
-    allowDirections:'left',
     items: [
       {
 	xtype: 'homeCardGroup',
-	allowSwipe:false,
+	itemId: 'homeCardGroupId',
 	title: 'Home',
 	iconCls: 'home'
       },
       {
+	xtype: 'schedule',
+	itemId: 'scheduleId',
+	title: 'Schedule',
+	iconCls: 'scheduleTabIcon'
+      },
+      {
 	xtype: 'facebookLogin',
+	itemId: 'facebookLoginId',
 	title: 'Facebook',
 	iconCls: 'faceBookTabIcon'
       },
       {
-	xtype:'twitterLogin',
+	xtype: 'twitterLogin',
+	itemId: 'twitterLoginId',
 	title: 'Twitter',
 	iconCls: 'twitterTabIcon'
       },
       {
 	xtype: 'moreCardGroup',
+	itemId: 'moreCardGroupId',
 	title: 'More Info',
 	iconCls: 'infoTabIcon'
       },
       {
 	title: 'Contact us',
+	itemId: 'contactUsId',
 	iconCls: 'contactusTabIcon',
 	html: 'Contact us Screen'
       },
       {
-//	xtype: 'logout',
+	xtype: 'logout',
+	itemId: 'logoutId',
 	title: 'Logout',
-	iconCls: 'logoutTabIcon',
-	html: 'Logout Screen'
+	iconCls: 'logoutTabIcon'
+      }
+    ],
+    listeners: [
+      {
+	fn: 'beforeCardSwitch',
+	event: 'activeitemchange'
       }
     ]
+  },
+  beforeCardSwitch: function (tabPanel, newTab, oldTab, eOpts) {
+    RaterDashboard.app.getController('HomeMainTabController').bottomTabTapped(tabPanel, newTab, oldTab, eOpts);
   }
 });
