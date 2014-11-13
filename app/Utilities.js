@@ -41,7 +41,9 @@ var fblogin = function () {
     //var appId = prompt("Enter FB Application ID", "");
     facebookConnectPlugin.browserInit('992961657386602');
   }
-  alert('right here before login');
+  alert('right here before login is '+ typeof(facebookConnectPlugin)+ ' is the value');
+  if (typeof(facebookConnectPlugin) != 'undefined'
+     && facebookConnectPlugin != null ) 
   //facebookConnectPlugin.browserInit('992961657386602');
   facebookConnectPlugin.login(["ashross.usa@gmail.com"],
 	  function (response) {

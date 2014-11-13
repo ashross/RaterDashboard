@@ -44,8 +44,11 @@
 			"path": "facebookConnectPlugin.js"
 			
 		},
-		
-	{
+		{
+			"path": "facebook-js-sdk.js"
+			
+		},
+	    {
           "path" : "phonegap/plugins/com.bez4pieci.cookies/www/cookies.js"
         },
 	{
