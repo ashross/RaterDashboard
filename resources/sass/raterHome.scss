@@ -1,6 +1,7 @@
 @mixin raterHome{
   .swipeCardsCls{
-    background:rgba(84, 84, 84, 0.4);
+    /*background:rgba(84, 84, 84, 0.4);*/
+    background:#fff;
     .x-carousel-item{
       border: 1px solid #000;
       border-radius:10px; 
@@ -12,6 +13,29 @@
   .blockStyleLayoutCls{
     border-radius:9px;
     background:white;
+  }
+  .containerImgBlockCls{
+    border-bottom: 1px solid #649b02;
+    padding-bottom: 15px;
+    margin: 15px 0 0;
+  }
+  .imgBlockCls{
+    padding: 10px;
+    width:30%;
+    color:#000;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #fff;
+    margin-left:2.5%;
+    .headingCls{
+      color:#1d5a8a;
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+    .contentCls{
+      font-size: 13px;
+    }
   }
 
 }

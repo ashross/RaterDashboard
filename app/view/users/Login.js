@@ -9,13 +9,13 @@ Ext.define('RaterDashboard.view.users.Login', {
     layout: {
       type: 'vbox',
       pack: 'center',
-      align: 'stretch'
+      align: 'center'
     },
     cls: 'loginCls',
     items: [
       {
 	xtype: 'panel',
-	html: '<div align="center"><img src="resources/images/logo.png" width="40%" /></div>'
+	html: '<div align="center"><img src="resources/images/logo.png" width="100%" /></div>'
       },
       {
 	xtype: 'fieldset',
@@ -43,7 +43,7 @@ Ext.define('RaterDashboard.view.users.Login', {
 	  {
 	    xtype: 'button',
 	    text: 'Login',
-	    width: 90,
+	    width: 80,
 	    margin: '0 0 0 7',
 	    itemId: 'loginBtnId',
 	    cls: 'buttonCls'
@@ -59,7 +59,7 @@ Ext.define('RaterDashboard.view.users.Login', {
       {
 	xtype: 'button',
 	text: 'Create an Accoount',
-	margin: '10 35%',
+	margin: '10 32%',
 	cls: 'buttonCls',
 	docked: 'bottom'
       }

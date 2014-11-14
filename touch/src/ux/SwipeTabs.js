@@ -38,9 +38,10 @@ Ext.define('Ext.ux.SwipeTabs', {
      */
     allowDirections: [
       'left',
-      'right',
-      'up',
-      'down'
+      'right'
+//      ,
+//      'up',
+//      'down'
     ]
   },
   constructor: function (config) {
@@ -75,9 +76,6 @@ Ext.define('Ext.ux.SwipeTabs', {
 	    idx = Ext.Array.indexOf(innerItems, activeItem),
 	    newIdx = idx + (direction === 'left' ? 1 : -1),
 	    newItem;
-
-    console.log('swipe on cards');
-    console.log(activeItem);
 
     if (newIdx < 0) {
       if (allowOverflow) {

@@ -52,6 +52,31 @@ Ext.define("RaterDashboard.controller.HomeMainTabController", {
       me.getMainToolbar().setTitle('Logout');
       me.getSlideNavList().select(0);
 
+// Before login tabs started here
+    } else if (cardID === 'apCentralId') {
+
+      me.getMainToolbar().setTitle('AP Central');
+
+    } else if (cardID === 'facebookId') {
+
+      me.getMainToolbar().setTitle('Facebook Login');
+      me.getSlideNavList().select(1);
+
+    } else if (cardID === 'twitterId') {
+
+      me.getMainToolbar().setTitle('Twitter');
+      me.getSlideNavList().select(2);
+
+    } else if (cardID === 'moreId') {
+
+      me.getMainToolbar().setTitle('More  Info');
+
+    } else if (cardID === 'loginId') {
+
+      me.getMainToolbar().setTitle('Login');
+      me.getSlideNavList().select(0);
+
     }
+
   }
 });
