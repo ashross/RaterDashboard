@@ -63,6 +63,18 @@ Ext.define("RaterDashboard.controller.RaterModuleController", {
   },
   swipeDirection: function (container, value, oldValue, eOpts) {
     var me = this;
+    container.getActiveItem().setCls('blockStyleLayoutCls activeCardCls');
+    container.getActiveItem().setStyle('left: -20px;');
+    console.log(container.animationDirection);
+    
+
+    if (container.animationDirection === 1) {
+      oldValue.setStyle('left:0px');
+      oldValue.setCls('blockStyleLayoutCls');
+    } else {
+      oldValue.setStyle('left:-40px');
+      oldValue.setCls('blockStyleLayoutCls');
+    }
     var cardNum = container.activeIndex;
     if (cardNum === 0) {
       me.getMainToolbar().setTitle('Rater Home');

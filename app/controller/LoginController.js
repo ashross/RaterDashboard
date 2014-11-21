@@ -11,7 +11,9 @@ Ext.define("RaterDashboard.controller.LoginController", {
       navBtn: 'mainCardGroup #navBtnId',
       backButton: 'mainCardGroup #backButtonId',
       homeMainTabPanel: 'homeMainTabPanel',
-      homeCardGroup:'homeCardGroup'
+      homeCardGroup: 'homeCardGroup',
+      // rate home carousel
+//      homeCardGroupId: '#homeCardGroupId'
     },
     control: {
       loginBtn: {
@@ -122,6 +124,8 @@ Ext.define("RaterDashboard.controller.LoginController", {
       });
       me.getHomeMainTabPanel().setActiveItem(0);
       me.getSlideNavList().select(5);
+      me.getHomeCardGroup().getActiveItem().setCls('blockStyleLayoutCls activeCardCls');
+      me.getHomeCardGroup().getActiveItem().setStyle('left:-20px');
     }
   }
 });

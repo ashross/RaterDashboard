@@ -11,10 +11,10 @@ Ext.define("RaterDashboard.view.home.HomeCardGroup", {
     'RaterDashboard.view.home.VideoList'
   ],
   config: {
-    itemId: 'homeCarouselViewId',
     indicator: false,
     activeItem: 0,
     cls: 'swipeCardsCls',
+    itemLength: window.innerWidth * 0.9,
     items: [
       {
 	xtype: 'raterHome',
