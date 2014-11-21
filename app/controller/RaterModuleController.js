@@ -33,22 +33,22 @@ Ext.define("RaterDashboard.controller.RaterModuleController", {
       }
     }
   },
-  videoListTapped: function (list, index, target, record, e, eOpts) {
-    var me = this;
-    console.log(record.data.url);
-    var url = record.data.url;
-    alert('video url is ' + url);
-    me.getNavBtn().setHidden(true);
-    me.getBackButton().setHidden(false);
-    me.getMainToolbar().setTitle('Player');
-    GLOB.v.previousPage = 'videoList';
-    GLOB.v.previousPageTitle = 'Videos';
-    me.getVideoCardGroup().animateActiveItem('videoLinks', {
-      type: 'slide',
-      direction: 'left'
-    });
-    me.getVideoLinkSrc().setUrl(url);
-  },
+//  videoListTapped: function (list, index, target, record, e, eOpts) {
+//    var me = this;
+//    console.log(record.data.url);
+//    var url = record.data.url;
+//    alert('video url is ' + url);
+//    me.getNavBtn().setHidden(true);
+//    me.getBackButton().setHidden(false);
+//    me.getMainToolbar().setTitle('Player');
+//    GLOB.v.previousPage = 'videoList';
+//    GLOB.v.previousPageTitle = 'Videos';
+//    me.getVideoCardGroup().animateActiveItem('videoLinks', {
+//      type: 'slide',
+//      direction: 'left'
+//    });
+//    me.getVideoLinkSrc().setUrl(url);
+//  },
   homeListTapped: function (list, index, target, record, e, eOpts) {
     var me = this;
     console.log(record.data.url);
@@ -65,8 +65,6 @@ Ext.define("RaterDashboard.controller.RaterModuleController", {
     var me = this;
     container.getActiveItem().setCls('blockStyleLayoutCls activeCardCls');
     container.getActiveItem().setStyle('left: -20px;');
-    console.log(container.animationDirection);
-    
 
     if (container.animationDirection === 1) {
       oldValue.setStyle('left:0px');

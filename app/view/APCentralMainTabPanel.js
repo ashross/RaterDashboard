@@ -17,37 +17,37 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
     items: [
       {
 	xtype: 'apCentral',
-	itemId:'apCentralId',
+	itemId: 'apCentralId',
 	title: 'Home',
 	iconCls: 'home'
       },
       {
 	xtype: 'facebookLogin',
-	itemId:'facebookId',
+	itemId: 'facebookId',
 	title: 'Facebook',
 	iconCls: 'faceBookTabIcon'
       },
       {
 	xtype: 'twitterLogin',
-	itemId:'twitterId',
+	itemId: 'twitterId',
 	title: 'Twitter',
 	iconCls: 'twitterTabIcon'
       },
       {
 	xtype: 'moreCardGroup',
-	itemId:'moreId',
+	itemId: 'moreId',
 	title: 'More Info',
 	iconCls: 'infoTabIcon'
       },
       {
 	title: 'Contact us',
-	itemId:'contactUsId',
+	itemId: 'contactUsId',
 	iconCls: 'contactusTabIcon',
 	html: 'Contact us Screen'
       },
       {
 	xtype: 'login',
-	itemId:'loginId',
+	itemId: 'loginId',
 	title: 'Login',
 	iconCls: 'loginTabIcon'
       }
