@@ -15,7 +15,9 @@ Ext.application({
     'Ext.Video',
     'Ext.carousel.Carousel',
     'RaterDashboard.Utilities',
-    'Ext.ux.SwipeTabs'
+    'Ext.ux.SwipeTabs',
+    'Ext.field.Search',
+    'Ext.dataview.List'
   ],
   views: [
     'Main',
@@ -31,19 +33,29 @@ Ext.application({
     'SchedulerController',
     'FaceBookController',
     'LogoutController',
-    'HomeMainTabController'
+    'HomeMainTabController',
+    'Twitter',
+    'Contacts'
   ],
   stores: [
     'SlideNavListStore',
     'Raters',
     'NewsStore',
-    'Videos'
+    'Videos',
+    'FBHomePageFeeds',
+    'FBFriendsList',
+    'TwitterHomeTimelines',
+    'Contacts'
   ],
   models: [
     'SlideNavList',
     'Rater',
     'News',
-    'Video'
+    'Video',
+    'FBHomePageFeeds',
+    'FBFriendsList',
+    'TwitterHomeTimeline',
+    'Contacts'
   ],
   icon: {
     '57': 'resources/icons/Icon.png',

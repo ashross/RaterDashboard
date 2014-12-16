@@ -17,8 +17,11 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "RaterDashboard": "app",
+  "RaterDashboard.Utilities": "app/Utilities-bak.js",
   "RaterDashboard.controller.FaceBookController": "app/controller/FaceBookController .js",
-  "RaterDashboard.view.more.AboutRater": "app/view/more/aboutRater.js"
+  "RaterDashboard.view.facebook.FacebookLogin": "app/view/facebook/FacebookLogin-bak.js",
+  "RaterDashboard.view.more.AboutRater": "app/view/more/aboutRater.js",
+  "RaterDashboard.view.twitter.TwitterLogin": "app/view/twitter/TwitterLogin-bak.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
   "Ext.AbstractComponent": [],
@@ -643,25 +646,42 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "RaterDashboard.Utilities": [],
   "RaterDashboard.controller.APCentralController": [],
+  "RaterDashboard.controller.Contacts": [],
   "RaterDashboard.controller.FaceBookController": [],
+  "RaterDashboard.controller.HomeMainTabController": [],
   "RaterDashboard.controller.LoginController": [],
+  "RaterDashboard.controller.LogoutController": [],
   "RaterDashboard.controller.MoreController": [],
   "RaterDashboard.controller.RaterModuleController": [],
   "RaterDashboard.controller.SchedulerController": [],
   "RaterDashboard.controller.SlideNavController": [],
+  "RaterDashboard.controller.Twitter": [],
+  "RaterDashboard.model.Contacts": [],
+  "RaterDashboard.model.FBFriendsList": [],
+  "RaterDashboard.model.FBHomePageFeeds": [],
   "RaterDashboard.model.News": [],
   "RaterDashboard.model.Rater": [],
   "RaterDashboard.model.SlideNavList": [],
+  "RaterDashboard.model.TwitterHomeTimeline": [],
   "RaterDashboard.model.Video": [],
+  "RaterDashboard.store.Contacts": [],
+  "RaterDashboard.store.FBFriendsList": [],
+  "RaterDashboard.store.FBHomePageFeeds": [],
   "RaterDashboard.store.NewsStore": [],
   "RaterDashboard.store.Raters": [],
   "RaterDashboard.store.SlideNavListStore": [],
+  "RaterDashboard.store.TwitterHomeTimelines": [],
   "RaterDashboard.store.Videos": [],
   "RaterDashboard.view.APCentral": [],
   "RaterDashboard.view.APCentralMainTabPanel": [],
+  "RaterDashboard.view.Contacts.ContactsCardGroup": [],
+  "RaterDashboard.view.Contacts.ContactsList": [],
   "RaterDashboard.view.Main": [],
   "RaterDashboard.view.MainCardGroup": [],
   "RaterDashboard.view.NavigationList": [],
+  "RaterDashboard.view.facebook.FacebookActivity": [],
+  "RaterDashboard.view.facebook.FacebookCardGroup": [],
+  "RaterDashboard.view.facebook.FacebookFriendsList": [],
   "RaterDashboard.view.facebook.FacebookLogin": [],
   "RaterDashboard.view.home.APReader": [],
   "RaterDashboard.view.home.CoursesAndExams": [],
@@ -672,6 +692,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.home.RaterHome": [],
   "RaterDashboard.view.home.TeacherCommunity": [],
   "RaterDashboard.view.home.VideoList": [],
+  "RaterDashboard.view.logout.Logout": [],
   "RaterDashboard.view.maps.Maps": [],
   "RaterDashboard.view.more.AboutRater": [],
   "RaterDashboard.view.more.MoreCardGroup": [],
@@ -680,6 +701,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "RaterDashboard.view.rater.Rater": [],
   "RaterDashboard.view.schedule.Schedule": [],
   "RaterDashboard.view.sponsor.Sponsor": [],
+  "RaterDashboard.view.twitter.TwitterActivity": [],
+  "RaterDashboard.view.twitter.TwitterCardGroup": [],
   "RaterDashboard.view.twitter.TwitterLogin": [],
   "RaterDashboard.view.users.Login": []
 });
@@ -1405,25 +1428,43 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "RaterDashboard.Utilities": [],
   "RaterDashboard.controller.APCentralController": [],
+  "RaterDashboard.controller.Contacts": [],
   "RaterDashboard.controller.FaceBookController": [],
+  "RaterDashboard.controller.HomeMainTabController": [],
   "RaterDashboard.controller.LoginController": [],
+  "RaterDashboard.controller.LogoutController": [],
   "RaterDashboard.controller.MoreController": [],
   "RaterDashboard.controller.RaterModuleController": [],
   "RaterDashboard.controller.SchedulerController": [],
   "RaterDashboard.controller.SlideNavController": [],
+  "RaterDashboard.controller.Twitter": [],
+  "RaterDashboard.model.Contacts": [],
+  "RaterDashboard.model.FBFriendsList": [],
+  "RaterDashboard.model.FBHomePageFeeds": [],
   "RaterDashboard.model.News": [],
   "RaterDashboard.model.Rater": [],
   "RaterDashboard.model.SlideNavList": [],
+  "RaterDashboard.model.TwitterHomeTimeline": [],
   "RaterDashboard.model.Video": [],
+  "RaterDashboard.store.Contacts": [],
+  "RaterDashboard.store.FBFriendsList": [],
+  "RaterDashboard.store.FBHomePageFeeds": [],
   "RaterDashboard.store.NewsStore": [],
   "RaterDashboard.store.Raters": [],
   "RaterDashboard.store.SlideNavListStore": [],
+  "RaterDashboard.store.TwitterHomeTimelines": [],
   "RaterDashboard.store.Videos": [],
   "RaterDashboard.view.APCentral": [
     "widget.apCentral"
   ],
   "RaterDashboard.view.APCentralMainTabPanel": [
     "widget.apCentralMainTabPanel"
+  ],
+  "RaterDashboard.view.Contacts.ContactsCardGroup": [
+    "widget.contactsCardGroup"
+  ],
+  "RaterDashboard.view.Contacts.ContactsList": [
+    "widget.contactsList"
   ],
   "RaterDashboard.view.Main": [
     "widget.main"
@@ -1433,6 +1474,15 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "RaterDashboard.view.NavigationList": [
     "widget.navigationList"
+  ],
+  "RaterDashboard.view.facebook.FacebookActivity": [
+    "widget.facebookActivity"
+  ],
+  "RaterDashboard.view.facebook.FacebookCardGroup": [
+    "widget.facebookCardGroup"
+  ],
+  "RaterDashboard.view.facebook.FacebookFriendsList": [
+    "widget.facebookFriendsList"
   ],
   "RaterDashboard.view.facebook.FacebookLogin": [
     "widget.facebookLogin"
@@ -1464,6 +1514,9 @@ Ext.ClassManager.addNameAliasMappings({
   "RaterDashboard.view.home.VideoList": [
     "widget.videoList"
   ],
+  "RaterDashboard.view.logout.Logout": [
+    "widget.logout"
+  ],
   "RaterDashboard.view.maps.Maps": [
     "widget.maps"
   ],
@@ -1487,6 +1540,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "RaterDashboard.view.sponsor.Sponsor": [
     "widget.sponsor"
+  ],
+  "RaterDashboard.view.twitter.TwitterActivity": [
+    "widget.twitterActivity"
+  ],
+  "RaterDashboard.view.twitter.TwitterCardGroup": [
+    "widget.twitterCardGroup"
   ],
   "RaterDashboard.view.twitter.TwitterLogin": [
     "widget.twitterLogin"

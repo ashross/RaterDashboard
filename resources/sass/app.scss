@@ -12,6 +12,7 @@
 @import 'login.scss';
 @import 'raterHome.scss';
 @import 'alertBox.scss';
+@import 'fb_twitter.scss';
 
 
 @include toolbar;
@@ -25,5 +26,6 @@
 @include login;
 @include raterHome;
 @include alertBox;
+@include fb_twitter;
 
 /*@include icon('user');*/

@@ -1,0 +1,24 @@
+{
+    "version": "1.1.0",
+    "name": "com.ccsoft.plugin.cordovafacebook",
+    "cordova_name": "CordovaFacebook",
+    "description": "Cordova plugin that handles Facebook integration in mobile apps.",
+    "license": "Apache 2.0 License",
+    "repo": "https://github.com/ccsoft/cordova-facebook/",
+    "issue": "https://github.com/ccsoft/cordova-facebook/issues",
+    "keywords": [
+        "facebook",
+        "cordova",
+        "ccsoft"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

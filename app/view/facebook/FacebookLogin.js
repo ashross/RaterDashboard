@@ -7,21 +7,18 @@ Ext.define('RaterDashboard.view.facebook.FacebookLogin', {
       pack: 'center',
       align: 'center'
     },
-    scrollable: {
-      direction: 'vertical',
-      directionLock: true
-    },
     items: [
       {
 	xtype: 'panel',
 	html: '<div class="fb-login-button" data-max-rows="2" data-size="large" data-show-faces="true" data-auto-logout-link="true"></div>'
       },
-      {
-	xtype: 'button',
-	cls: 'scheduleBtnCls',
-	itemId: 'faceBookBtnId',
-	text: 'FaceBook Login'
-      }
+       
+	  {
+	    xtype: 'button',
+	    cls: 'scheduleBtnCls',
+	    itemId: 'faceBookBtnId',
+	    text: 'FaceBook Login'
+	  }
     ]
   }
 });

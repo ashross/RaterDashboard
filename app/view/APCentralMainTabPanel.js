@@ -4,8 +4,9 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
   requires: [
     'RaterDashboard.view.APCentral',
     'RaterDashboard.view.more.MoreCardGroup',
-    'RaterDashboard.view.facebook.FacebookLogin',
-    'RaterDashboard.view.twitter.TwitterLogin',
+    'RaterDashboard.view.facebook.FacebookCardGroup',
+    'RaterDashboard.view.twitter.TwitterCardGroup',
+    'RaterDashboard.view.Contacts.ContactsCardGroup',
     'RaterDashboard.view.users.Login'
   ],
   config: {
@@ -22,16 +23,22 @@ Ext.define("RaterDashboard.view.APCentralMainTabPanel", {
 	iconCls: 'home'
       },
       {
-	xtype: 'facebookLogin',
-	itemId: 'facebookId',
-	title: 'Facebook',
-	iconCls: 'faceBookTabIcon'
+  xtype: 'facebookCardGroup',
+  title: 'Facebook',
+  iconCls: 'faceBookTabIcon'
       },
       {
-	xtype: 'twitterLogin',
-	itemId: 'twitterId',
-	title: 'Twitter',
-	iconCls: 'twitterTabIcon'
+  xtype: 'twitterCardGroup',
+  title: 'Twitter',
+  iconCls: 'twitterTabIcon',
+  //html: 'Twitter section'
+      },
+      {
+  xtype: 'contactsCardGroup',
+  title: 'Tell Friends',
+  iconCls: 'user',
+  //itemId: 'contactsTabId'
+  //html: 'Tell Friends About US'
       },
       {
 	xtype: 'moreCardGroup',

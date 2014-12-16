@@ -1,0 +1,81 @@
+@mixin fb_twitter{
+  
+  	.searchfieldInputCls{
+        border-radius: 1em;
+        line-height: 1.2em;
+    }
+
+    .searchfieldCls{
+        border-radius: 1em;
+        line-height: 1em;   
+    }
+
+    .fbTitlebarCls{
+        color:#FFFFFF !important;
+        border: 1px solid #2c539e !important;
+        background: #2c539e !important; /* Old browsers */
+        background: -moz-linear-gradient(top,  #2c539e 0%, #2c539e 100%) !important; /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c539e), color-stop(100%,#2c539e)) !important; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #2c539e 0%,#2c539e 100%) !important; /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #2c539e 0%,#2c539e 100%) !important; /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #2c539e 0%,#2c539e 100%) !important; /* IE10+ */
+        background: linear-gradient(to bottom, #eee 0%,#1122cc 50%, #1122cc 100%) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#2c539e',GradientType=0 ) !important; /* IE6-9 */
+    }
+
+    .fbIconBtnCls{
+        -webkit-mask-image: url(../images/camera.png);
+        height: 1.8em !important;
+        width:  1.8em !important;
+        color: white;
+        background-size: 70% !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-mask-size: 100%;
+        background: white;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+    }
+
+    .fbBtnCls{
+        color:#FFFFFF !important;
+        border: 1px solid #2c539e !important;
+        margin-left: 1em;
+        margin-right: 1em;
+        background: #2c539e !important; /* Old browsers */
+        background: -moz-linear-gradient(top,  #2c539e 0%, #2c539e 100%) !important; /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c539e), color-stop(100%,#2c539e)) !important; /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #2c539e 0%,#2c539e 100%) !important; /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #2c539e 0%,#2c539e 100%) !important; /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #2c539e 0%,#2c539e 100%) !important; /* IE10+ */
+        background: linear-gradient(to bottom, #eee 0%,#1122cc 50%, #1122cc 100%) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#2c539e',GradientType=0 ) !important; /* IE6-9 */
+    }
+    .twitterToolbarCsl{
+      background: #55acee !important;
+    }
+    .twitterSearchFieldCls{
+      line-height: 1.2em;
+    }
+
+    .refreshIconBtnCls{
+        -webkit-mask-image: url(../images/refresh.png);
+        height: 1.8em !important;
+        width:  1.8em !important;
+        color: white;
+        background-size: 70% !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-mask-size: 100%;
+        background: white;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+    }
+
+    .refreshBtnCls{
+      padding-bottom: 6px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+
+}
